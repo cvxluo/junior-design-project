@@ -6,3 +6,4 @@ Members:
 - Jill Patel (jpatel409@gatech.edu, 762-219-6305)
 - Alexa O'Reilly (aoreilly7@gatech.edu, 470-775-4289)
 - Ian Loo (yloo6@gatech.edu, 404-663-6205)
+- Manavi Rao (mrao44@gatech.edu, 404-983-3408)
