@@ -6,6 +6,7 @@ const colors = {
   blue: "#427199",
   darkblue: "#194265",
   lightblue: "#DBE4EE",
+  lightgray: "#F1F1F1",
 };
 
 const theme = extendTheme({ colors });

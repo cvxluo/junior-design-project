@@ -1,5 +1,4 @@
 import {
-  Box,
   VStack,
   Center,
   Text,
@@ -11,13 +10,20 @@ import {
   Tab,
   Textarea,
   Button,
-  Heading,
-  UnorderedList,
-  ListItem,
 } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar";
+import InfoBox from "../../components/InfoBox";
 
-import styles from "./Home.module.css";
+const guidelinesInfo = {
+  title: "General Guidelines",
+  listContent: [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  ],
+  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+};
 
 export default function Home() {
   return (
@@ -56,29 +62,7 @@ export default function Home() {
           <Button m="1em">Export</Button>
         </Center>
 
-        <Box
-          backgroundColor="#22527B"
-          width="80vw"
-          margin="auto"
-          color="#F1F1F1"
-        >
-          <Heading ml="2em" p="1em">
-            General Guidelines
-          </Heading>
-          <UnorderedList>
-            <ListItem>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              </Text>
-            </ListItem>
-            <ListItem>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              </Text>
-            </ListItem>
-          </UnorderedList>
-          <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Text>
-        </Box>
+        <InfoBox content={guidelinesInfo} />
       </VStack>
     </div>
   );

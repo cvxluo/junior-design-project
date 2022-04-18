@@ -5,15 +5,23 @@ import {
   Tab,
   TabPanel,
   VStack,
-  Heading,
-  UnorderedList,
-  ListItem,
-  Text,
   Center,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 
 import NavBar from "../../components/NavBar/NavBar";
+import InfoBox from "src/components/InfoBox";
+
+const infoExample = {
+  title: "General Guidelines",
+  listContent: [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  ],
+  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+};
 
 export default function Guidelines() {
   return (
@@ -56,58 +64,14 @@ export default function Guidelines() {
           <TabPanels>
             <TabPanel>
               <VStack>
-                <Box
-                  backgroundColor="#22527B"
-                  width="80vw"
-                  margin="auto"
-                  color="#F1F1F1"
-                >
-                  <Heading marginLeft="2em">General</Heading>
-                  <UnorderedList>
-                    <ListItem>
-                      <Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                      </Text>
-                    </ListItem>
-                    <ListItem>
-                      <Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                      </Text>
-                    </ListItem>
-                    <ListItem>
-                      <Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                      </Text>
-                    </ListItem>
-                  </UnorderedList>
-                </Box>
-                <Box
-                  backgroundColor="#22527B"
-                  width="80vw"
-                  margin="auto"
-                  color="#F1F1F1"
-                >
-                  <Heading ml="2em">General</Heading>
-                  <UnorderedList>
-                    <ListItem>
-                      <Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                      </Text>
-                    </ListItem>
-                    <ListItem>
-                      <Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                      </Text>
-                    </ListItem>
-                  </UnorderedList>
-                  <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                  </Text>
-                </Box>
+                <InfoBox content={infoExample}></InfoBox>
+                <InfoBox content={infoExample}></InfoBox>
               </VStack>
             </TabPanel>
             <TabPanel>
-              <p>two!</p>
+              <VStack>
+                <InfoBox content={infoExample}></InfoBox>
+              </VStack>
             </TabPanel>
           </TabPanels>
         </Tabs>
