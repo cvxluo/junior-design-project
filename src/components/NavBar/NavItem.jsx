@@ -9,10 +9,10 @@ export const NavItem = ({ name, to }) => {
   return (
     <NextLink href={to} passHref>
       <Link
-        backgroundColor={selected ? "#427199" : "#DBE4EE"}
+        backgroundColor={selected ? "blue" : "lightblue"}
         borderStyle="solid"
         borderWidth={10}
-        borderColor={selected ? "#427199" : "#DBE4EE"}
+        borderColor={selected ? "blue" : "lightblue"}
         margin="1em 2em"
         padding="0 4em"
         borderRadius={20}

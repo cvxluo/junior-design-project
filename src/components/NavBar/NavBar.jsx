@@ -17,7 +17,7 @@ const NavBar = () => {
       align="center"
       justify="space-between"
       wrap="wrap"
-      backgroundColor="#194265"
+      backgroundColor="darkblue"
       color="black"
       padding="0 3em"
     >
