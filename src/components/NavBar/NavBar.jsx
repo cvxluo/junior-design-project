@@ -12,7 +12,15 @@ const links = [
 
 const NavBar = () => {
   return (
-    <Flex as="nav" align="center" justify="space-between" wrap="wrap">
+    <Flex
+      as="nav"
+      align="center"
+      justify="space-between"
+      wrap="wrap"
+      backgroundColor="#194265"
+      color="black"
+      padding="0 3em"
+    >
       {links.map(({ name, url }) => (
         <NavItem key={name} name={name} to={url} />
       ))}

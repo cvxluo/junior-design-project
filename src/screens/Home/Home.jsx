@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 
-import NavBar from "../../components/NavBar/NavBar";
+import NavBar from "../../components/NavBar";
 
 import styles from "./Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <NavBar />
       <Head>
         <title>Create Next App</title>
