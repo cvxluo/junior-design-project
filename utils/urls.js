@@ -4,5 +4,6 @@ export default {
     guidelines: "/guidelines",
     reports: "/reports",
     profile: "/profile",
+    login: "/login",
   },
 };

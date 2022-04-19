@@ -6,10 +6,14 @@ import {
   HStack,
   StackDivider,
   Button,
+  Link,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 
+import NextLink from "next/link";
 import NavBar from "../../components/NavBar/NavBar";
+
+import urls from "utils/urls";
 
 const infoExample = {
   title: "General Guidelines",
@@ -73,7 +77,27 @@ export default function Guidelines() {
               <Button>Add Email</Button>
               <Button>Change Information</Button>
               <Button>Change Password</Button>
-              <Button>Log Out</Button>
+              <NextLink href={urls.pages.login} passHref>
+                <Link
+                  backgroundColor="lightblue"
+                  borderStyle="solid"
+                  borderWidth={10}
+                  borderColor="lightblue"
+                  margin="1em 2em"
+                  padding="0 4em"
+                  borderRadius={20}
+                  color="black"
+                >
+                  <Text
+                    display="block"
+                    fontSize={18}
+                    margin="0em"
+                    textAlign="center"
+                  >
+                    Log Out
+                  </Text>
+                </Link>
+              </NextLink>
             </VStack>
           </HStack>
         </VStack>
