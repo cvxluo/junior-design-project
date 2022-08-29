@@ -1,4 +1,4 @@
-### Junior Design Project
+### Junior Design Project (Team 2122)
 
 Members:
 
