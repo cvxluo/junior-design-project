@@ -13,6 +13,9 @@ import {
 } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar";
 import InfoBox from "../../components/InfoBox";
+import { useState } from "react";
+
+import { createReport } from "../../actions/Report";
 
 const guidelinesInfo = {
   title: "General Guidelines",
@@ -26,6 +29,17 @@ const guidelinesInfo = {
 };
 
 export default function Home() {
+  const [name, setName] = useState("");
+  const [quarter, setQuarter] = useState(0);
+  const [year, setYear] = useState(0);
+  const [data, setReportText] = useState("");
+
+  const handleSubmit = () => {
+    createReport({ name, quarter, year, data }).then((res) => {
+      alert("Successfully created report with id: " + res._id);
+    });
+  };
+
   return (
     <div>
       <NavBar />
@@ -34,17 +48,29 @@ export default function Home() {
           <Text color="white" m="0 1em" fontWeight="bold">
             Personnel Name
           </Text>
-          <Input placeholder="Name" />
+          <Input
+            placeholder="Name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+          />
           <Text color="white" m="0 1em" fontWeight="bold">
             Quarter
           </Text>
-          <NumberInput m="0 0.5em">
+          <NumberInput
+            m="0 0.5em"
+            value={quarter}
+            onChange={(newQuarter) => setQuarter(newQuarter)}
+          >
             <NumberInputField placeholder="0" w="20px" />
           </NumberInput>
           <Text color="white" m="0 1em" fontWeight="bold">
             Year
           </Text>
-          <NumberInput m="0 1em">
+          <NumberInput
+            m="0 1em"
+            value={year}
+            onChange={(newYear) => setYear(newYear)}
+          >
             <NumberInputField placeholder="2022" w="40px" />
           </NumberInput>
         </Center>
@@ -56,10 +82,18 @@ export default function Home() {
           </TabList>
         </Tabs>
 
-        <Textarea backgroundColor="lightblue" w="80vw" h="40vh" />
+        <Textarea
+          backgroundColor="lightblue"
+          w="80vw"
+          h="40vh"
+          value={data}
+          onChange={(event) => setReportText(event.target.value)}
+        />
         <Center>
           <Button m="1em">Check</Button>
-          <Button m="1em">Export</Button>
+          <Button m="1em" onClick={handleSubmit}>
+            Export
+          </Button>
         </Center>
 
         <InfoBox content={guidelinesInfo} />
