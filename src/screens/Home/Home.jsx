@@ -109,8 +109,8 @@ export default function Home() {
           </Button>
         </Center>
         <HStack>
-          <InfoBox content={guidelinesInfo} />
-          <InfoBox content={abbrInfo} />
+          <InfoBox content={guidelinesInfo} width="50vw" h="40vh"/>
+          <InfoBox content={abbrInfo} width="50vw" h="40vh"/>
         </HStack>
         
       </VStack>
