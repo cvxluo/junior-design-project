@@ -20,12 +20,24 @@ import { createReport } from "../../actions/Report";
 const guidelinesInfo = {
   title: "General Guidelines",
   listContent: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Include what and how the employee accomplishedf and the impact it had in each line",
+    "Use action oriented verbs - for a recommended list of verbs, visit the Guidelines page",
+    "Use sub-bullets to provide more details if needed",
+    "Use the whole line for each bullet and no more",
   ],
-  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  paragraphContent: "more text here if needed",
+};
+
+const abbrInfo = {
+  title: "Automatic Abbreviations",
+  listContent: [
+    "b/c - because",
+    "w/ - with",
+    "w/out - without",
+    "op - operation",
+    "ops - operations",
+    "dept - department",
+  ]
 };
 
 export default function Home() {
@@ -96,7 +108,11 @@ export default function Home() {
           </Button>
         </Center>
 
-        <InfoBox content={guidelinesInfo} />
+        <Center>
+          <InfoBox content={guidelinesInfo} />
+          <InfoBox content={abbrInfo} />
+        </Center>
+        
       </VStack>
     </div>
   );
