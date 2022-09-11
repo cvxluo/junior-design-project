@@ -10,6 +10,7 @@ import {
   Tab,
   Textarea,
   Button,
+  HStack
 } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar";
 import InfoBox from "../../components/InfoBox";
@@ -107,11 +108,10 @@ export default function Home() {
             Export
           </Button>
         </Center>
-
-        <Center>
+        <HStack>
           <InfoBox content={guidelinesInfo} />
           <InfoBox content={abbrInfo} />
-        </Center>
+        </HStack>
         
       </VStack>
     </div>
