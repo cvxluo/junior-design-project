@@ -10,7 +10,7 @@ import {
   Tab,
   Textarea,
   Button,
-  HStack
+  HStack,
 } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar";
 import InfoBox from "../../components/InfoBox";
@@ -38,7 +38,7 @@ const abbrInfo = {
     "op - operation",
     "ops - operations",
     "dept - department",
-  ]
+  ],
 };
 
 export default function Home() {
@@ -48,9 +48,13 @@ export default function Home() {
   const [data, setReportText] = useState("");
 
   const handleSubmit = () => {
-    createReport({ name, quarter, year, data }).then((res) => {
-      alert("Successfully created report with id: " + res._id);
-    });
+    let date_of_creation = new Date().toLocaleDateString();
+    console.log(date);
+    createReport({ name, date_of_creation, quarter, year, data }).then(
+      (res) => {
+        alert("Successfully created report with id: " + res._id);
+      }
+    );
   };
 
   return (
@@ -109,10 +113,9 @@ export default function Home() {
           </Button>
         </Center>
         <HStack>
-          <InfoBox content={guidelinesInfo} width="50vw" h="40vh"/>
-          <InfoBox content={abbrInfo} width="50vw" h="40vh"/>
+          <InfoBox content={guidelinesInfo} width="50vw" h="40vh" />
+          <InfoBox content={abbrInfo} width="50vw" h="40vh" />
         </HStack>
-        
       </VStack>
     </div>
   );

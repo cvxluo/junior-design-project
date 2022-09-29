@@ -5,6 +5,10 @@ const ReportSchema = new Schema({
     type: String,
     required: true,
   },
+  date_of_creation: {
+    type: String,
+    required: true,
+  },
   quarter: {
     type: Number,
     required: true,
