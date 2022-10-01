@@ -46,10 +46,12 @@ export default function Home() {
   const [quarter, setQuarter] = useState(0);
   const [year, setYear] = useState(0);
   const [data, setReportText] = useState("");
-
+  // const [user, setUser] = useState("");
+  // not sure how to setUser
+  let user = "placeholder";
   const handleSubmit = () => {
     let date_of_creation = new Date().toLocaleDateString();
-    createReport({ name, date_of_creation, quarter, year, data }).then(
+    createReport({ name, user, date_of_creation, quarter, year, data }).then(
       (res) => {
         alert("Successfully created report with id: " + res._id);
       }
