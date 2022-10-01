@@ -14,6 +14,7 @@ import NextLink from "next/link";
 import NavBar from "../../components/NavBar/NavBar";
 
 import urls from "utils/urls";
+import { useSession, signOut } from "next-auth/react";
 
 const infoExample = {
   title: "General Guidelines",
@@ -26,7 +27,13 @@ const infoExample = {
   paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 };
 
-export default function Guidelines() {
+export default function Profile() {
+  const handleLogout = (e) => {
+    e.preventDefault();
+    signOut();
+  };
+  const { data: session } = useSession();
+  console.log(session);
   return (
     <Box backgroundColor="blue">
       <NavBar />
@@ -88,14 +95,7 @@ export default function Guidelines() {
                   borderRadius={20}
                   color="black"
                 >
-                  <Text
-                    display="block"
-                    fontSize={18}
-                    margin="0em"
-                    textAlign="center"
-                  >
-                    Log Out
-                  </Text>
+                  <Button onClick={handleLogout}>Logout</Button>
                 </Link>
               </NextLink>
             </VStack>

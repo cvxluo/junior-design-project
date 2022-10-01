@@ -9,10 +9,14 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import urls from "utils/urls";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function Login() {
+  const { data: session } = useSession();
+  console.log(session);
   return (
     <Box backgroundColor="blue">
+      <button onClick={() => signIn()}>Sign in</button>
       <VStack m="10vh">
         <Heading color="lightgray">Login</Heading>
         <Box align="start">
