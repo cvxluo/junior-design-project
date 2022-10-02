@@ -11,6 +11,15 @@ import {
   Textarea,
   Button,
   HStack,
+  Divider,
+  Box,
+  Grid,
+  GridItem,
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
 } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar";
 import InfoBox from "../../components/InfoBox";
@@ -21,12 +30,11 @@ import { createReport } from "../../actions/Report";
 const guidelinesInfo = {
   title: "General Guidelines",
   listContent: [
-    "Include what and how the employee accomplishedf and the impact it had in each line",
+    "What they accomplished; how they accomplished it; the impact it had",
     "Use action oriented verbs - for a recommended list of verbs, visit the Guidelines page",
     "Use sub-bullets to provide more details if needed",
     "Use the whole line for each bullet and no more",
   ],
-  paragraphContent: "more text here if needed",
 };
 
 const abbrInfo = {
@@ -111,10 +119,44 @@ export default function Home() {
             Export
           </Button>
         </Center>
-        <HStack>
-          <InfoBox content={guidelinesInfo} width="50vw" h="40vh" />
-          <InfoBox content={abbrInfo} width="50vw" h="40vh" />
-        </HStack>
+        
+        <Grid
+          templateAreas={`"header1 header2"
+                  "guidelines abbr"`}
+          gridTemplateRows={'50px 1fr'}
+          gridTemplateColumns={'1fr 1fr'}
+          h='200px'
+          gap='1'
+          color='blackAlpha.700'
+          fontWeight='bold'
+        >
+          <GridItem pl='2' bg='blue.300' area={'header1'}>
+            Basic Guidelines
+          </GridItem>
+          <GridItem pl='2' bg='blue.300' area={'header2'}>
+            Automatic Abbreviations
+          </GridItem>
+          <GridItem pl='2' bg='blue.300' area={'guidelines'}>
+            <UnorderedList>
+              <ListItem>Format: what;how;impact </ListItem>
+              <ListItem>Use action-oriented verbs</ListItem>
+              <ListItem>Use sub-bullets if needed</ListItem>
+              <ListItem>Use the whole line</ListItem>
+              <ListItem>Do not go over 1 line per bullet</ListItem>
+              <ListItem>Visit the Guidelines page for more information</ListItem>
+            </UnorderedList>
+          </GridItem>
+          <GridItem pl='2' bg='blue.300' area={'abbr'}>
+            <UnorderedList>
+              <ListItem>b/c: because </ListItem>
+              <ListItem>w/: with</ListItem>
+              <ListItem>w/out: without</ListItem>
+              <ListItem>dept: department</ListItem>
+              <ListItem>op: operation</ListItem>
+            </UnorderedList>
+            <Button colorScheme='blue' size='md'>Add</Button>
+          </GridItem>
+        </Grid>
       </VStack>
     </div>
   );
