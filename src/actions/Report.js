@@ -1,6 +1,12 @@
 import urls from "../../utils/urls";
 
-export const createReport = async ({ name, quarter, year, data }) =>
+export const createReport = async ({
+  name,
+  date_of_creation,
+  quarter,
+  year,
+  data,
+}) =>
   fetch(urls.baseUrl + urls.api.reports.create, {
     method: "POST",
     mode: "same-origin",
@@ -9,6 +15,7 @@ export const createReport = async ({ name, quarter, year, data }) =>
     },
     body: JSON.stringify({
       name,
+      date_of_creation,
       quarter,
       year,
       data,

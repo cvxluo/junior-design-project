@@ -10,6 +10,7 @@ import {
   Tab,
   Textarea,
   Button,
+  HStack,
 } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar";
 import InfoBox from "../../components/InfoBox";
@@ -20,12 +21,24 @@ import { createReport } from "../../actions/Report";
 const guidelinesInfo = {
   title: "General Guidelines",
   listContent: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Include what and how the employee accomplishedf and the impact it had in each line",
+    "Use action oriented verbs - for a recommended list of verbs, visit the Guidelines page",
+    "Use sub-bullets to provide more details if needed",
+    "Use the whole line for each bullet and no more",
   ],
-  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  paragraphContent: "more text here if needed",
+};
+
+const abbrInfo = {
+  title: "Automatic Abbreviations",
+  listContent: [
+    "b/c - because",
+    "w/ - with",
+    "w/out - without",
+    "op - operation",
+    "ops - operations",
+    "dept - department",
+  ],
 };
 
 export default function Home() {
@@ -35,9 +48,12 @@ export default function Home() {
   const [data, setReportText] = useState("");
 
   const handleSubmit = () => {
-    createReport({ name, quarter, year, data }).then((res) => {
-      alert("Successfully created report with id: " + res._id);
-    });
+    let date_of_creation = new Date().toLocaleDateString();
+    createReport({ name, date_of_creation, quarter, year, data }).then(
+      (res) => {
+        alert("Successfully created report with id: " + res._id);
+      }
+    );
   };
 
   return (
@@ -95,8 +111,10 @@ export default function Home() {
             Export
           </Button>
         </Center>
-
-        <InfoBox content={guidelinesInfo} />
+        <HStack>
+          <InfoBox content={guidelinesInfo} width="50vw" h="40vh" />
+          <InfoBox content={abbrInfo} width="50vw" h="40vh" />
+        </HStack>
       </VStack>
     </div>
   );
