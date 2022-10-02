@@ -14,7 +14,7 @@ import NextLink from "next/link";
 import NavBar from "../../components/NavBar/NavBar";
 
 import urls from "utils/urls";
-import { useSession, signOut } from "next-auth/react";
+import { signOut } from "next-auth/react";
 
 const infoExample = {
   title: "General Guidelines",
@@ -32,8 +32,6 @@ export default function Profile() {
     e.preventDefault();
     signOut();
   };
-  const { data: session } = useSession();
-  console.log(session);
   return (
     <Box backgroundColor="blue">
       <NavBar />
