@@ -27,28 +27,6 @@ import { useState } from "react";
 
 import { createReport } from "../../actions/Report";
 
-const guidelinesInfo = {
-  title: "General Guidelines",
-  listContent: [
-    "What they accomplished; how they accomplished it; the impact it had",
-    "Use action oriented verbs - for a recommended list of verbs, visit the Guidelines page",
-    "Use sub-bullets to provide more details if needed",
-    "Use the whole line for each bullet and no more",
-  ],
-};
-
-const abbrInfo = {
-  title: "Automatic Abbreviations",
-  listContent: [
-    "b/c - because",
-    "w/ - with",
-    "w/out - without",
-    "op - operation",
-    "ops - operations",
-    "dept - department",
-  ],
-};
-
 export default function Home() {
   const [name, setName] = useState("");
   const [quarter, setQuarter] = useState(0);
@@ -126,8 +104,8 @@ export default function Home() {
           gridTemplateRows={'50px 1fr'}
           gridTemplateColumns={'1fr 1fr'}
           h='200px'
-          gap='1'
-          color='blackAlpha.700'
+          gap='3'
+          color='white'
           fontWeight='bold'
         >
           <GridItem pl='2' bg='blue.300' area={'header1'}>
@@ -136,7 +114,7 @@ export default function Home() {
           <GridItem pl='2' bg='blue.300' area={'header2'}>
             Automatic Abbreviations
           </GridItem>
-          <GridItem pl='2' bg='blue.300' area={'guidelines'}>
+          <GridItem pl='2' bg='pink' area={'guidelines'}>
             <UnorderedList>
               <ListItem>Format: what;how;impact </ListItem>
               <ListItem>Use action-oriented verbs</ListItem>
@@ -154,7 +132,7 @@ export default function Home() {
               <ListItem>dept: department</ListItem>
               <ListItem>op: operation</ListItem>
             </UnorderedList>
-            <Button colorScheme='blue' size='md'>Add</Button>
+            <Button m="1em">Add</Button>
           </GridItem>
         </Grid>
       </VStack>
