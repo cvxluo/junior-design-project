@@ -16,17 +16,6 @@ import NavBar from "../../components/NavBar/NavBar";
 import urls from "utils/urls";
 import { signOut } from "next-auth/react";
 
-const infoExample = {
-  title: "General Guidelines",
-  listContent: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  ],
-  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-};
-
 export default function Profile() {
   const handleLogout = (e) => {
     e.preventDefault();

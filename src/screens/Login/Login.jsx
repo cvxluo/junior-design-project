@@ -1,15 +1,6 @@
-import {
-  Box,
-  VStack,
-  Heading,
-  Text,
-  Input,
-  Button,
-  Link,
-} from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Box, VStack, Heading, Text, Input, Button } from "@chakra-ui/react";
 import urls from "utils/urls";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { signIn } from "next-auth/react";
 
 export default function Login() {
   return (
@@ -29,7 +20,9 @@ export default function Login() {
           <Input backgroundColor="lightblue" placeholder="Name" />
         </Box>
 
-        <Button onClick={() => signIn("google", { callbackUrl: "/" })}>
+        <Button
+          onClick={() => signIn("google", { callbackUrl: urls.pages.home })}
+        >
           Sign In With Google
         </Button>
       </VStack>
