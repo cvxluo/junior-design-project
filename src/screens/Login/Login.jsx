@@ -6,6 +6,8 @@ import {
   Input,
   Button,
   Link,
+  InputGroup,
+  InputRightElement
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import urls from "utils/urls";
