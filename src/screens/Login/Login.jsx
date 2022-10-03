@@ -28,7 +28,7 @@ export default function Login() {
             Password
           </Text>
           <InputGroup>
-            <Input backgroundColor="lightblue" placeholder="Password" type={show ? 'text' : 'password'} />
+            <Input backgroundColor="lightblue" placeholder="Password"/>
             <InputRightElement width='4.5rem'>
               <Button h='1.75rem' size='sm'>
                 Button
