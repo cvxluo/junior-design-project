@@ -17,14 +17,19 @@ import {
   InfoBox,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
-import { useState } from "react";
-import { getReport } from "src/actions/Report";
+import { useEffect, useState } from "react";
+import { getReport, getAll } from "src/actions/Report";
 
 import NavBar from "../../components/NavBar/NavBar";
 
 export default function Reports() {
   const [reportID, setReportID] = useState("");
   const [reportData, setReportData] = useState("");
+
+  const [reports, setReports] = useState([]);
+  useEffect(() => {
+    getAll().then((reports) => setReports(reports));
+  }, []);
 
   const handleSubmit = (e) => {
     getReport({ reportId: reportID }).then((report) => {
@@ -62,6 +67,13 @@ export default function Reports() {
               Reports()
             </ButtonGroup>
           </Box>
+          <Button
+            onClick={(e) => {
+              console.log(reports);
+            }}
+          >
+            Check retrieved reports
+          </Button>
         </VStack>
       </div>
     </Box>

@@ -16,3 +16,11 @@ export async function getReport(reportId) {
 
   return report;
 }
+
+export async function getAll() {
+  await mongoDB();
+
+  const reports = await ReportSchema.find();
+
+  return reports;
+}

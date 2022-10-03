@@ -25,6 +25,7 @@ export default {
       get: "/api/reports/get",
       update: "/api/reports/update",
       delete: "/api/reports/delete",
+      getAll: "/api/reports/getAll",
     },
   },
 };

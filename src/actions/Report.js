@@ -51,3 +51,19 @@ export const getReport = async ({ reportId }) =>
       }
       return json.payload;
     });
+
+export const getAll = async () =>
+  fetch(urls.baseUrl + urls.api.reports.getAll, {
+    method: "GET",
+    mode: "same-origin",
+  })
+    .then((response) => response.json())
+    .then((json) => {
+      if (json == null) {
+        throw new Error("Could not connect to API");
+      }
+      if (!json.success) {
+        throw new Error(json.message);
+      }
+      return json.payload;
+    });
