@@ -46,8 +46,8 @@ export default function Home() {
   return (
     <div>
       <NavBar />
-      <Box h='10'></Box>
       <VStack backgroundColor="blue">
+        <Box h='10'></Box>
         <Center>
           <Text color="white" m="0 1em" fontWeight="bold">
             Personnel Name
@@ -57,19 +57,21 @@ export default function Home() {
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
-          <Text color="white" m="0 1em" fontWeight="bold">
-            Quarter
-          </Text>
-          <NumberInput
-            m="0 0.5em"
-            value={quarter}
+          <Select placeholder='Select Quarter' isRequired='true'>
+            <option value='1'>Q1</option>
+            <option value='2'>Q2</option>
+            <option value='3'>Q3</option>
+            <option value='4'>Q4</option>
             onChange={(newQuarter) => setQuarter(newQuarter)}
-          >
-            <NumberInputField placeholder="0" w="20px" />
-          </NumberInput>
+          </Select>
           <Text color="white" m="0 1em" fontWeight="bold">
             Year
           </Text>
+          <Input
+            placeholder="Year"
+            value={year}
+            onChange={(event) => setYear(newYear)}
+          />
           <NumberInput
             m="0 1em"
             value={year}
@@ -77,12 +79,7 @@ export default function Home() {
           >
             <NumberInputField placeholder="2022" w="40px" />
           </NumberInput>
-          <Select placeholder='Select Quarter'>
-            <option value='1'>Q1</option>
-            <option value='2'>Q2</option>
-            <option value='3'>Q3</option>
-            <option value='4'>Q4</option>
-          </Select>
+
 
         </Center>
 
