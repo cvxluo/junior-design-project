@@ -108,10 +108,10 @@ export default function Home() {
           color='white'
           fontWeight='bold'
         >
-          <GridItem pl='2' bg='blue' area={'header1'}>
+          <GridItem pl='20' bg='blue' area={'header1'}>
             Basic Guidelines
           </GridItem>
-          <GridItem pl='2' bg='blue' area={'header2'}>
+          <GridItem pl='20' bg='blue' area={'header2'}>
             Automatic Abbreviations
           </GridItem>
           <GridItem pl='20' bg='blue' area={'guidelines'}>
@@ -124,7 +124,7 @@ export default function Home() {
               <ListItem>Visit the Guidelines page for more information</ListItem>
             </UnorderedList>
           </GridItem>
-          <GridItem pl='2' bg='blue' area={'abbr'}>
+          <GridItem pl='20' bg='blue' area={'abbr'}>
             <UnorderedList>
               <ListItem>b/c: because </ListItem>
               <ListItem>w/: with</ListItem>

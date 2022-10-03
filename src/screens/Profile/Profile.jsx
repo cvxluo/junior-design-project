@@ -35,12 +35,12 @@ export default function Guidelines() {
           <Heading color="lightgray">My Account</Heading>
 
           <HStack
-            spacing={96}
-            divider={<StackDivider borderColor="#DBE4EE" borderWidth={5} />}
+            spacing={40}
+            divider={<StackDivider borderColor="#DBE4EE" borderWidth={3} />}
           >
             <VStack alignItems="start">
               <Box>
-                <Text fontSize="4xl" fontWeight="bold" color="lightgray">
+                <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Name
                 </Text>
                 <Text fontSize="lg" color="lightgray">
@@ -48,7 +48,7 @@ export default function Guidelines() {
                 </Text>
               </Box>
               <Box>
-                <Text fontSize="4xl" fontWeight="bold" color="lightgray">
+                <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Primary Email
                 </Text>
                 <Text fontSize="lg" color="lightgray">
@@ -56,7 +56,7 @@ export default function Guidelines() {
                 </Text>
               </Box>
               <Box>
-                <Text fontSize="4xl" fontWeight="bold" color="lightgray">
+                <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Secondary Email
                 </Text>
                 <Text fontSize="lg" color="lightgray">
@@ -64,7 +64,7 @@ export default function Guidelines() {
                 </Text>
               </Box>
               <Box>
-                <Text fontSize="4xl" fontWeight="bold" color="lightgray">
+                <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Account Creation Date
                 </Text>
                 <Text fontSize="lg" color="lightgray">
