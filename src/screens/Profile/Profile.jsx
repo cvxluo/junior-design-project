@@ -34,11 +34,10 @@ export default function Guidelines() {
         <VStack>
           <Heading color="lightgray">My Account</Heading>
           <Box h='10'> 
-
           </Box>
 
           <HStack
-            spacing={40}
+            spacing={20}
             divider={<StackDivider borderColor="#DBE4EE" borderWidth={3} />}
           >
             <VStack alignItems="start">
@@ -57,6 +56,7 @@ export default function Guidelines() {
                 <Text fontSize="lg" color="lightgray">
                   johndoe@gmail.com
                 </Text>
+                <Button size='sm'>Change</Button>
               </Box>
               <Box p='5'>
                 <Text fontSize="2xl" fontWeight="bold" color="lightgray">
@@ -65,6 +65,7 @@ export default function Guidelines() {
                 <Text fontSize="lg" color="lightgray">
                   johndoe@yahoo.com
                 </Text>
+                <Button size='sm'>Change</Button>
               </Box>
               <Box p='5'>
                 <Text fontSize="2xl" fontWeight="bold" color="lightgray">
@@ -77,9 +78,8 @@ export default function Guidelines() {
             </VStack>
 
             <VStack spacing={10}>
-              <Button size='sm'>Add Email</Button>
-              <Button size='sm'>Change Information</Button>
               <Button size='sm'>Change Password</Button>
+              <Button size='sm'>Delete Account</Button>
               <NextLink href={urls.pages.login} passHref>
                 <Link
                   backgroundColor="lightblue"
