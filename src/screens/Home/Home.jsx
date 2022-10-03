@@ -52,15 +52,17 @@ export default function Home() {
           <Text color="white">
             Personnel Name:
           </Text>
+          <Box w='10'></Box>
           <Input
             placeholder="Name"
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
-          <Box w='10'></Box>
+          <Box w='20'></Box>
           <Text color="white">
             Quarter:
           </Text>
+          <Box w='10'></Box>
           <Select placeholder='Select Quarter' isRequired='true'>
             <option value='1'>Q1</option>
             <option value='2'>Q2</option>
@@ -68,10 +70,11 @@ export default function Home() {
             <option value='4'>Q4</option>
             onChange={(newQuarter) => setQuarter(newQuarter)}
           </Select>
-          <Box w='10'></Box>
+          <Box w='20'></Box>
           <Text color="white">
             Year:
           </Text>
+          <Box w='10'></Box>
           <Input
             placeholder="Year"
             value={year}

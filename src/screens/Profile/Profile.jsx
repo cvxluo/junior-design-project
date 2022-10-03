@@ -38,7 +38,7 @@ export default function Guidelines() {
 
           <HStack
             spacing={20}
-            divider={<StackDivider borderColor="#DBE4EE" borderWidth={3} />}
+            divider={<StackDivider borderColor="#DBE4EE" borderWidth={2} />}
           >
             <VStack alignItems="start">
               <Box p='5'>
@@ -78,8 +78,8 @@ export default function Guidelines() {
             </VStack>
 
             <VStack spacing={10}>
-              <Button size='sm'>Change Password</Button>
-              <Button size='sm'>Delete Account</Button>
+              <Button>Change Password</Button>
+              <Button>Delete Account</Button>
               <NextLink href={urls.pages.login} passHref>
                 <Link
                   backgroundColor="lightblue"
@@ -88,7 +88,7 @@ export default function Guidelines() {
                   borderColor="lightblue"
                   margin="1em 2em"
                   padding="0 4em"
-                  borderRadius={20}
+                  borderRadius={5}
                   color="black"
                 >
                   <Text
