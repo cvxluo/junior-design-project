@@ -101,20 +101,20 @@ export default function Home() {
         <Grid
           templateAreas={`"header1 header2"
                   "guidelines abbr"`}
-          gridTemplateRows={'50px 1fr'}
-          gridTemplateColumns={'1fr 1fr'}
+          gridTemplateRows={'30px 300px'}
+          gridTemplateColumns={'300px 300px'}
           h='200px'
           gap='3'
           color='white'
           fontWeight='bold'
         >
-          <GridItem pl='2' bg='blue.300' area={'header1'}>
+          <GridItem pl='2' bg='blue' area={'header1'}>
             Basic Guidelines
           </GridItem>
-          <GridItem pl='2' bg='blue.300' area={'header2'}>
+          <GridItem pl='2' bg='blue' area={'header2'}>
             Automatic Abbreviations
           </GridItem>
-          <GridItem pl='2' bg='pink' area={'guidelines'}>
+          <GridItem pl='20' bg='blue' area={'guidelines'}>
             <UnorderedList>
               <ListItem>Format: what;how;impact </ListItem>
               <ListItem>Use action-oriented verbs</ListItem>
@@ -124,7 +124,7 @@ export default function Home() {
               <ListItem>Visit the Guidelines page for more information</ListItem>
             </UnorderedList>
           </GridItem>
-          <GridItem pl='2' bg='blue.300' area={'abbr'}>
+          <GridItem pl='2' bg='blue' area={'abbr'}>
             <UnorderedList>
               <ListItem>b/c: because </ListItem>
               <ListItem>w/: with</ListItem>
