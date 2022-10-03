@@ -102,19 +102,19 @@ export default function Home() {
           templateAreas={`"header1 header2"
                   "guidelines abbr"`}
           gridTemplateRows={'30px 300px'}
-          gridTemplateColumns={'300px 300px'}
+          gridTemplateColumns={'500px 500px'}
           h='200px'
           gap='3'
           color='white'
           fontWeight='bold'
         >
-          <GridItem pl='20' bg='darkgray' area={'header1'}>
+          <GridItem pl='5' bg='blue.300' area={'header1'}>
             Basic Guidelines
           </GridItem>
-          <GridItem pl='20' bg='darkgray' area={'header2'}>
+          <GridItem pl='5' bg='blue.300' area={'header2'}>
             Automatic Abbreviations
           </GridItem>
-          <GridItem pl='20' bg='darkgray' area={'guidelines'}>
+          <GridItem pl='5' color='blue.300' area={'guidelines'}>
             <UnorderedList>
               <ListItem>Format: what;how;impact </ListItem>
               <ListItem>Use action-oriented verbs</ListItem>
@@ -124,7 +124,7 @@ export default function Home() {
               <ListItem>Visit the Guidelines page for more information</ListItem>
             </UnorderedList>
           </GridItem>
-          <GridItem pl='20' bg='darkgray' area={'abbr'}>
+          <GridItem pl='20' bg='blue.300' area={'abbr'}>
             <UnorderedList>
               <ListItem>b/c: because </ListItem>
               <ListItem>w/: with</ListItem>
@@ -132,7 +132,7 @@ export default function Home() {
               <ListItem>dept: department</ListItem>
               <ListItem>op: operation</ListItem>
             </UnorderedList>
-            <Button m="1em">Add</Button>
+            <Button m="1em" colorScheme='gray'>Add</Button>
           </GridItem>
         </Grid>
       </VStack>

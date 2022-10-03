@@ -33,7 +33,7 @@ export default function Guidelines() {
       <Center my="2em">
         <VStack>
           <Heading color="lightgray">My Account</Heading>
-          <Box h='20'> 
+          <Box h='10'> 
 
           </Box>
 
