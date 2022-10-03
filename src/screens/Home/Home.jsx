@@ -20,6 +20,7 @@ import {
   ListIcon,
   OrderedList,
   UnorderedList,
+  Select
 } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar";
 import InfoBox from "../../components/InfoBox";
@@ -45,6 +46,7 @@ export default function Home() {
   return (
     <div>
       <NavBar />
+      <Box h='10'></Box>
       <VStack backgroundColor="blue">
         <Center>
           <Text color="white" m="0 1em" fontWeight="bold">
@@ -75,6 +77,13 @@ export default function Home() {
           >
             <NumberInputField placeholder="2022" w="40px" />
           </NumberInput>
+          <Select placeholder='Select Quarter'>
+            <option value='1'>Q1</option>
+            <option value='2'>Q2</option>
+            <option value='3'>Q3</option>
+            <option value='4'>Q4</option>
+          </Select>
+
         </Center>
 
         <Tabs variant="solid-rounded">
@@ -124,7 +133,7 @@ export default function Home() {
               <ListItem>Visit the Guidelines page for more information</ListItem>
             </UnorderedList>
           </GridItem>
-          <GridItem pl='20' bg='blue.300' area={'abbr'}>
+          <GridItem pl='5' bg='blue.300' area={'abbr'}>
             <UnorderedList>
               <ListItem>b/c: because </ListItem>
               <ListItem>w/: with</ListItem>
