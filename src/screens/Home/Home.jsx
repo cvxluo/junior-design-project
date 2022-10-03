@@ -49,7 +49,6 @@ export default function Home() {
 
   const handleSubmit = () => {
     let date_of_creation = new Date().toLocaleDateString();
-    console.log(date_of_creation);
     createReport({ name, date_of_creation, quarter, year, data }).then(
       (res) => {
         alert("Successfully created report with id: " + res._id);
