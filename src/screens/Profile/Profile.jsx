@@ -32,7 +32,6 @@ export default function Guidelines() {
       <NavBar />
       <Center my="2em">
         <VStack>
-          <Heading color="lightgray">My Account</Heading>
           <Box h='10'> 
           </Box>
 
