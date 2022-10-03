@@ -13,8 +13,6 @@ import NextLink from "next/link";
 import urls from "utils/urls";
 
 export default function Login() {
-  const [show, setShow] = React.useState(false)
-  const handleClick = () => setShow(!show)
   return (
     <Box backgroundColor="blue">
       <VStack m="10vh">
@@ -30,10 +28,10 @@ export default function Login() {
             Password
           </Text>
           <InputGroup>
-            <Input backgroundColor="lightblue" placeholder="Password" type={show ? 'text' : 'password'}/>
+            <Input backgroundColor="lightblue" placeholder="Password"/>
             <InputRightElement width='4.5rem'>
-              <Button h='1.75rem' size='sm' onClick={handleClick}>
-                {show ? 'Hide' : 'Show'}
+              <Button h='1.75rem' size='sm'>
+                Show
               </Button>
             </InputRightElement>
           </InputGroup>
