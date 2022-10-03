@@ -33,13 +33,16 @@ export default function Guidelines() {
       <Center my="2em">
         <VStack>
           <Heading color="lightgray">My Account</Heading>
+          <Box h='20'> 
+
+          </Box>
 
           <HStack
             spacing={40}
             divider={<StackDivider borderColor="#DBE4EE" borderWidth={3} />}
           >
             <VStack alignItems="start">
-              <Box>
+              <Box p='5'>
                 <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Name
                 </Text>
@@ -47,7 +50,7 @@ export default function Guidelines() {
                   John Doe
                 </Text>
               </Box>
-              <Box>
+              <Box p='5'>
                 <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Primary Email
                 </Text>
@@ -55,7 +58,7 @@ export default function Guidelines() {
                   johndoe@gmail.com
                 </Text>
               </Box>
-              <Box>
+              <Box p='5'>
                 <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Secondary Email
                 </Text>
@@ -63,7 +66,7 @@ export default function Guidelines() {
                   johndoe@yahoo.com
                 </Text>
               </Box>
-              <Box>
+              <Box p='5'>
                 <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Account Creation Date
                 </Text>
@@ -74,9 +77,9 @@ export default function Guidelines() {
             </VStack>
 
             <VStack spacing={10}>
-              <Button>Add Email</Button>
-              <Button>Change Information</Button>
-              <Button>Change Password</Button>
+              <Button size='sm'>Add Email</Button>
+              <Button size='sm'>Change Information</Button>
+              <Button size='sm'>Change Password</Button>
               <NextLink href={urls.pages.login} passHref>
                 <Link
                   backgroundColor="lightblue"

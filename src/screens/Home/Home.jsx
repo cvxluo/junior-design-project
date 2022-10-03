@@ -108,13 +108,13 @@ export default function Home() {
           color='white'
           fontWeight='bold'
         >
-          <GridItem pl='20' bg='blue' area={'header1'}>
+          <GridItem pl='20' bg='darkgray' area={'header1'}>
             Basic Guidelines
           </GridItem>
-          <GridItem pl='20' bg='blue' area={'header2'}>
+          <GridItem pl='20' bg='darkgray' area={'header2'}>
             Automatic Abbreviations
           </GridItem>
-          <GridItem pl='20' bg='blue' area={'guidelines'}>
+          <GridItem pl='20' bg='darkgray' area={'guidelines'}>
             <UnorderedList>
               <ListItem>Format: what;how;impact </ListItem>
               <ListItem>Use action-oriented verbs</ListItem>
@@ -124,7 +124,7 @@ export default function Home() {
               <ListItem>Visit the Guidelines page for more information</ListItem>
             </UnorderedList>
           </GridItem>
-          <GridItem pl='20' bg='blue' area={'abbr'}>
+          <GridItem pl='20' bg='darkgray' area={'abbr'}>
             <UnorderedList>
               <ListItem>b/c: because </ListItem>
               <ListItem>w/: with</ListItem>
