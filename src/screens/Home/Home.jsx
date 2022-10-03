@@ -49,14 +49,15 @@ export default function Home() {
       <VStack backgroundColor="blue">
         <Box h='10'></Box>
         <Center>
-          <Text color="white" m="0 1em" fontWeight="bold">
-            Personnel Name
+          <Text color="white" m="0 1em">
+            Personnel Name:
           </Text>
           <Input
             placeholder="Name"
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
+          <Box w='10'></Box>
           <Select placeholder='Select Quarter' isRequired='true'>
             <option value='1'>Q1</option>
             <option value='2'>Q2</option>
@@ -64,22 +65,12 @@ export default function Home() {
             <option value='4'>Q4</option>
             onChange={(newQuarter) => setQuarter(newQuarter)}
           </Select>
-          <Text color="white" m="0 1em" fontWeight="bold">
-            Year
-          </Text>
+          <Box w='10'></Box>
           <Input
             placeholder="Year"
             value={year}
             onChange={(event) => setYear(newYear)}
           />
-          <NumberInput
-            m="0 1em"
-            value={year}
-            onChange={(newYear) => setYear(newYear)}
-          >
-            <NumberInputField placeholder="2022" w="40px" />
-          </NumberInput>
-
 
         </Center>
 
