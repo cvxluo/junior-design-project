@@ -6,6 +6,7 @@ const handler = async (req, res) => {
 
     return res.status(200).json({
       success: true,
+      payload: user,
     });
   } catch (error) {
     res.status(400).json({

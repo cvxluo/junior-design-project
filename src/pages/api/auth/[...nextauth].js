@@ -3,7 +3,6 @@ import GoogleProvider from "next-auth/providers/google";
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import clientPromise from "utils/mongodb";
 import CredentialsProvider from "next-auth/providers/credentials";
-import urls from "utils/urls";
 import { login } from "server/mongodb/actions/User";
 
 export const authOptions = {
@@ -31,7 +30,7 @@ export const authOptions = {
         },
         password: { label: "Password", type: "password" },
       },
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         // You need to provide your own logic here that takes the credentials
         // submitted and returns either a object representing a user or value
         // that is false/null if the credentials are invalid.

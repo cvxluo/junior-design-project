@@ -3,12 +3,10 @@ import {
   Box,
   VStack,
   Heading,
-  Text,
   Input,
   Button,
   FormControl,
   FormLabel,
-  FormHelperText,
 } from "@chakra-ui/react";
 import urls from "utils/urls";
 import { signIn } from "next-auth/react";
