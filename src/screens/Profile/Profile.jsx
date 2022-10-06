@@ -1,6 +1,5 @@
 import {
   VStack,
-  Heading,
   Text,
   Center,
   HStack,
@@ -26,39 +25,41 @@ export default function Profile() {
       <NavBar />
       <Center my="2em">
         <VStack>
-          <Heading color="lightgray">My Account</Heading>
+          <Box h="10"></Box>
 
           <HStack
-            spacing={96}
-            divider={<StackDivider borderColor="#DBE4EE" borderWidth={5} />}
+            spacing={20}
+            divider={<StackDivider borderColor="#DBE4EE" borderWidth={2} />}
           >
             <VStack alignItems="start">
-              <Box>
-                <Text fontSize="4xl" fontWeight="bold" color="lightgray">
+              <Box p="5">
+                <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Name
                 </Text>
                 <Text fontSize="lg" color="lightgray">
                   John Doe
                 </Text>
               </Box>
-              <Box>
-                <Text fontSize="4xl" fontWeight="bold" color="lightgray">
+              <Box p="5">
+                <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Primary Email
                 </Text>
                 <Text fontSize="lg" color="lightgray">
                   johndoe@gmail.com
                 </Text>
+                <Button size="sm">Change</Button>
               </Box>
-              <Box>
-                <Text fontSize="4xl" fontWeight="bold" color="lightgray">
+              <Box p="5">
+                <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Secondary Email
                 </Text>
                 <Text fontSize="lg" color="lightgray">
                   johndoe@yahoo.com
                 </Text>
+                <Button size="sm">Change</Button>
               </Box>
-              <Box>
-                <Text fontSize="4xl" fontWeight="bold" color="lightgray">
+              <Box p="5">
+                <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Account Creation Date
                 </Text>
                 <Text fontSize="lg" color="lightgray">
@@ -68,9 +69,8 @@ export default function Profile() {
             </VStack>
 
             <VStack spacing={10}>
-              <Button>Add Email</Button>
-              <Button>Change Information</Button>
               <Button>Change Password</Button>
+              <Button>Delete Account</Button>
               <NextLink href={urls.pages.login} passHref>
                 <Link
                   backgroundColor="lightblue"
@@ -79,7 +79,7 @@ export default function Profile() {
                   borderColor="lightblue"
                   margin="1em 2em"
                   padding="0 4em"
-                  borderRadius={20}
+                  borderRadius={5}
                   color="black"
                 >
                   <Button onClick={handleLogout}>Logout</Button>
