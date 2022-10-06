@@ -1,6 +1,5 @@
 import {
   VStack,
-  Heading,
   Text,
   Center,
   HStack,
@@ -26,15 +25,14 @@ export default function Profile() {
       <NavBar />
       <Center my="2em">
         <VStack>
-          <Box h='10'> 
-          </Box>
+          <Box h="10"></Box>
 
           <HStack
             spacing={20}
             divider={<StackDivider borderColor="#DBE4EE" borderWidth={2} />}
           >
             <VStack alignItems="start">
-              <Box p='5'>
+              <Box p="5">
                 <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Name
                 </Text>
@@ -42,25 +40,25 @@ export default function Profile() {
                   John Doe
                 </Text>
               </Box>
-              <Box p='5'>
+              <Box p="5">
                 <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Primary Email
                 </Text>
                 <Text fontSize="lg" color="lightgray">
                   johndoe@gmail.com
                 </Text>
-                <Button size='sm'>Change</Button>
+                <Button size="sm">Change</Button>
               </Box>
-              <Box p='5'>
+              <Box p="5">
                 <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Secondary Email
                 </Text>
                 <Text fontSize="lg" color="lightgray">
                   johndoe@yahoo.com
                 </Text>
-                <Button size='sm'>Change</Button>
+                <Button size="sm">Change</Button>
               </Box>
-              <Box p='5'>
+              <Box p="5">
                 <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Account Creation Date
                 </Text>
