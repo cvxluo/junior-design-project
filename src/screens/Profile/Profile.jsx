@@ -14,19 +14,13 @@ import NextLink from "next/link";
 import NavBar from "../../components/NavBar/NavBar";
 
 import urls from "utils/urls";
+import { signOut } from "next-auth/react";
 
-const infoExample = {
-  title: "General Guidelines",
-  listContent: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  ],
-  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-};
-
-export default function Guidelines() {
+export default function Profile() {
+  const handleLogout = (e) => {
+    e.preventDefault();
+    signOut();
+  };
   return (
     <Box backgroundColor="blue">
       <NavBar />
@@ -90,14 +84,7 @@ export default function Guidelines() {
                   borderRadius={5}
                   color="black"
                 >
-                  <Text
-                    display="block"
-                    fontSize={18}
-                    margin="0em"
-                    textAlign="center"
-                  >
-                    Log Out
-                  </Text>
+                  <Button onClick={handleLogout}>Logout</Button>
                 </Link>
               </NextLink>
             </VStack>

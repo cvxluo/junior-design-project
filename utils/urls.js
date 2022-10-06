@@ -26,5 +26,8 @@ export default {
       update: "/api/reports/update",
       delete: "/api/reports/delete",
     },
+    user: {
+      signUp: "/api/user/signUp",
+    },
   },
 };

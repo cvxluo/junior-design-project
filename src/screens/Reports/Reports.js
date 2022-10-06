@@ -1,14 +1,4 @@
-import {
-  VStack,
-  Heading,
-  Text,
-  Center,
-  HStack,
-  StackDivider,
-  Button,
-  Link,
-  Input,
-} from "@chakra-ui/react";
+import { VStack, Text, Center, Button, Input } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 
 import { useState } from "react";
@@ -20,7 +10,7 @@ export default function Reports() {
   const [reportID, setReportID] = useState("");
   const [reportData, setReportData] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     getReport({ reportId: reportID }).then((report) => {
       setReportData(report.data);
     });
