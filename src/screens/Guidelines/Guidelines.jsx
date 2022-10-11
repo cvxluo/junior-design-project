@@ -12,14 +12,15 @@ import { Box } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar/NavBar";
 import InfoBox from "src/components/InfoBox";
 
-const infoAcronyms = {
-  title: "IV. Acronyms",
-  paragraphContent: "The following are examples of some common acronyms that do not need to be written out:",
+const infoExample = {
+  title: "General Guidelines",
   listContent: [
-    "ACC",
-    "ACSC",
-    "AEF",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   ],
+  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 };
 
 export default function Guidelines() {
@@ -63,12 +64,13 @@ export default function Guidelines() {
           <TabPanels>
             <TabPanel>
               <VStack>
-                <InfoBox content={infoAcronyms}></InfoBox>
+                <InfoBox content={infoExample}></InfoBox>
+                <InfoBox content={infoExample}></InfoBox>
               </VStack>
             </TabPanel>
             <TabPanel>
               <VStack>
-                <InfoBox content={infoAcronyms}></InfoBox>
+                <InfoBox content={infoExample}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
