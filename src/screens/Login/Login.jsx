@@ -19,13 +19,13 @@ export default function Login() {
           <Text fontSize="1xl" fontWeight="bold" color="lightgray">
             Email
           </Text>
-          <Input backgroundColor="lightblue" placeholder="Name" />
+          <Input backgroundColor="lightblue" placeholder="example@gmail.com" />
         </Box>
         <Box align="start">
           <Text fontSize="1xl" fontWeight="bold" color="lightgray">
             Password
           </Text>
-          <Input backgroundColor="lightblue" placeholder="Name" />
+          <Input backgroundColor="lightblue" placeholder="Password" />
         </Box>
 
         <NextLink href={urls.pages.home} passHref>
