@@ -3,51 +3,22 @@ import {
   Center,
   Text,
   Input,
-  NumberInput,
-  NumberInputField,
   Tabs,
   TabList,
   Tab,
   Textarea,
   Button,
-  HStack,
-  Divider,
   Box,
   Grid,
   GridItem,
-  List,
   ListItem,
-  ListIcon,
-  OrderedList,
   UnorderedList,
+  Select,
 } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar";
-import InfoBox from "../../components/InfoBox";
 import { useState } from "react";
 
 import { createReport } from "../../actions/Report";
-
-const guidelinesInfo = {
-  title: "General Guidelines",
-  listContent: [
-    "What they accomplished; how they accomplished it; the impact it had",
-    "Use action oriented verbs - for a recommended list of verbs, visit the Guidelines page",
-    "Use sub-bullets to provide more details if needed",
-    "Use the whole line for each bullet and no more",
-  ],
-};
-
-const abbrInfo = {
-  title: "Automatic Abbreviations",
-  listContent: [
-    "b/c - because",
-    "w/ - with",
-    "w/out - without",
-    "op - operation",
-    "ops - operations",
-    "dept - department",
-  ],
-};
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -68,35 +39,33 @@ export default function Home() {
     <div>
       <NavBar />
       <VStack backgroundColor="blue">
+        <Box h="10"></Box>
         <Center>
-          <Text color="white" m="0 1em" fontWeight="bold">
-            Personnel Name
-          </Text>
+          <Text color="white">Personnel Name:</Text>
+          <Box w="10"></Box>
           <Input
             placeholder="Name"
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
-          <Text color="white" m="0 1em" fontWeight="bold">
-            Quarter
-          </Text>
-          <NumberInput
-            m="0 0.5em"
-            value={quarter}
+          <Box w="20"></Box>
+          <Text color="white">Quarter:</Text>
+          <Box w="10"></Box>
+          <Select placeholder="Select Quarter" isRequired="true">
+            <option value="1">Q1</option>
+            <option value="2">Q2</option>
+            <option value="3">Q3</option>
+            <option value="4">Q4</option>
             onChange={(newQuarter) => setQuarter(newQuarter)}
-          >
-            <NumberInputField placeholder="0" w="20px" />
-          </NumberInput>
-          <Text color="white" m="0 1em" fontWeight="bold">
-            Year
-          </Text>
-          <NumberInput
-            m="0 1em"
+          </Select>
+          <Box w="20"></Box>
+          <Text color="white">Year:</Text>
+          <Box w="10"></Box>
+          <Input
+            placeholder="Year"
             value={year}
-            onChange={(newYear) => setYear(newYear)}
-          >
-            <NumberInputField placeholder="2022" w="40px" />
-          </NumberInput>
+            onChange={(event) => setYear(event.target.value)}
+          />
         </Center>
 
         <Tabs variant="solid-rounded">
@@ -119,34 +88,36 @@ export default function Home() {
             Export
           </Button>
         </Center>
-        
+
         <Grid
           templateAreas={`"header1 header2"
                   "guidelines abbr"`}
-          gridTemplateRows={'50px 1fr'}
-          gridTemplateColumns={'1fr 1fr'}
-          h='200px'
-          gap='1'
-          color='blackAlpha.700'
-          fontWeight='bold'
+          gridTemplateRows={"30px 300px"}
+          gridTemplateColumns={"500px 500px"}
+          h="200px"
+          gap="3"
+          color="white"
+          fontWeight="bold"
         >
-          <GridItem pl='2' bg='blue.300' area={'header1'}>
+          <GridItem pl="5" bg="blue.300" area={"header1"}>
             Basic Guidelines
           </GridItem>
-          <GridItem pl='2' bg='blue.300' area={'header2'}>
+          <GridItem pl="5" bg="blue.300" area={"header2"}>
             Automatic Abbreviations
           </GridItem>
-          <GridItem pl='2' bg='blue.300' area={'guidelines'}>
+          <GridItem pl="5" color="blue.300" area={"guidelines"}>
             <UnorderedList>
               <ListItem>Format: what;how;impact </ListItem>
               <ListItem>Use action-oriented verbs</ListItem>
               <ListItem>Use sub-bullets if needed</ListItem>
               <ListItem>Use the whole line</ListItem>
               <ListItem>Do not go over 1 line per bullet</ListItem>
-              <ListItem>Visit the Guidelines page for more information</ListItem>
+              <ListItem>
+                Visit the Guidelines page for more information
+              </ListItem>
             </UnorderedList>
           </GridItem>
-          <GridItem pl='2' bg='blue.300' area={'abbr'}>
+          <GridItem pl="5" bg="blue.300" area={"abbr"}>
             <UnorderedList>
               <ListItem>b/c: because </ListItem>
               <ListItem>w/: with</ListItem>
@@ -154,7 +125,9 @@ export default function Home() {
               <ListItem>dept: department</ListItem>
               <ListItem>op: operation</ListItem>
             </UnorderedList>
-            <Button colorScheme='blue' size='md'>Add</Button>
+            <Button m="1em" colorScheme="gray">
+              Add
+            </Button>
           </GridItem>
         </Grid>
       </VStack>
