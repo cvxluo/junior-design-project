@@ -163,9 +163,6 @@ export default function Guidelines() {
                 <InfoBox content={infoDosDonts}></InfoBox>
               </VStack>
             </TabPanel>
-              <VStack>
-                <InfoBox content={infoDosDonts}></InfoBox>
-              </VStack>
           </TabPanels>
         </Tabs>
       </Box>
