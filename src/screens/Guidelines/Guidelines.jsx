@@ -15,17 +15,17 @@ import InfoBox from "src/components/InfoBox";
 const infoBasics = {
   title: "I. The Basics",
   listContent: [
-    "Use what;how;impact format",
+    "Use the what;how;impact format",
     "Review the ratee's previous performance reports",
     "Gather input from the ratee in advance",
     "Don't use prohibited statements (see section xx)",
     "Take the time to write a quality report",
     "Proofread your product",
     "Follow the do's and don'ts",
-    "Use strong word choice",
+    "Use strong word choice (see section III)",
     "Provide context",
     "Stratify your descriptions",
-    "Use common acronyms instead of writing them out",
+    "Use common acronyms instead of writing them out (see section IV)",
   ],
 };
 
@@ -48,7 +48,7 @@ const infoDosDonts = {
   ],
   paragraphContent: "Don't:",
   listContent: [
-    "Use prohibited statements",
+    "Use prohibited statements (see section xx)",
     "Include additional duties unless focused toward the mission",
     "Use terminology only your organization understands",
     "Leave white space, unless, of course, you're trying to send a negative message",
@@ -159,11 +159,22 @@ export default function Guidelines() {
                 <InfoBox content={infoBasics}></InfoBox>
                 <InfoBox content={infoDosDonts}></InfoBox>
                 <InfoBox content={infoWordChoice}></InfoBox>
+                <InfoBox content={infoAcronyms}></InfoBox>
               </VStack>
             </TabPanel>
             <TabPanel>
               <VStack>
-                <InfoBox content={infoDosDonts}></InfoBox>
+                <InfoBox content={infoBasics}></InfoBox>
+              </VStack>
+            </TabPanel>
+            <TabPanel>
+              <VStack>
+                <InfoBox content={infoBasics}></InfoBox>
+              </VStack>
+            </TabPanel>
+            <TabPanel>
+              <VStack>
+                <InfoBox content={infoBasics}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
