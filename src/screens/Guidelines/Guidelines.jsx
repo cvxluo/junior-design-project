@@ -12,6 +12,23 @@ import { Box } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar/NavBar";
 import InfoBox from "src/components/InfoBox";
 
+const infoBasics = {
+  title: "I. The Basics",
+  listContent: [
+    "Use what;how;impact format",
+    "Review the ratee's previous performance reports",
+    "Gather input from the ratee in advance",
+    "Don't use prohibited statements (see section xx)",
+    "Take the time to write a quality report",
+    "Proofread your product",
+    "Follow the do's and don'ts",
+    "Use strong word choice",
+    "Provide context",
+    "Stratify your descriptions",
+    "Use common acronyms instead of writing them out",
+  ],
+};
+
 const infoDosDonts = {
   title: "II. Do's and Don'ts",
   paragraphContent: "Do:",
@@ -86,21 +103,7 @@ const infoWordChoice = {
   ],
 };
 
-const infoBasics = {
-  title: "I. The Basics",
-  listContent: [
-    "Review the ratee's previous performance reports",
-    "Gather input from the ratee in advance",
-    "Don't use prohibited statements (see section xx)",
-    "Take the time to write a quality report",
-    "Proofread your product",
-    "Follow the do's and don'ts",
-    "Use strong word choice",
-    "Provide context",
-    "Stratify your descriptions",
-    "Use common acronyms instead of writing them out",
-  ],
-};
+
 
 const infoAcronyms = {
   title: "IV. Acronyms",
