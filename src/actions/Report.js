@@ -2,6 +2,7 @@ import urls from "../../utils/urls";
 
 export const createReport = async ({
   name,
+  user,
   date_of_creation,
   quarter,
   year,
@@ -15,6 +16,7 @@ export const createReport = async ({
     },
     body: JSON.stringify({
       name,
+      user,
       date_of_creation,
       quarter,
       year,
