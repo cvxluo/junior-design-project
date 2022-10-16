@@ -53,12 +53,15 @@ export default function Home() {
           <Box w="20"></Box>
           <Text color="white">Quarter:</Text>
           <Box w="10"></Box>
-          <Select placeholder="Select Quarter" isRequired="true">
+          <Select
+            placeholder="Select Quarter"
+            isRequired="true"
+            onChange={(newQuarter) => setQuarter(newQuarter)}
+          >
             <option value="1">Q1</option>
             <option value="2">Q2</option>
             <option value="3">Q3</option>
             <option value="4">Q4</option>
-            onChange={(newQuarter) => setQuarter(newQuarter)}
           </Select>
           <Box w="20"></Box>
           <Text color="white">Year:</Text>
