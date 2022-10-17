@@ -1,12 +1,14 @@
 import { VStack, Text, Center, Button, Input } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getReport } from "src/actions/Report";
 
 import NavBar from "../../components/NavBar/NavBar";
 
-export default function Reports() {
+export default function Reports(props) {
+  const { reports } = props;
+
   const [reportID, setReportID] = useState("");
   const [reportData, setReportData] = useState("");
 
@@ -15,6 +17,10 @@ export default function Reports() {
       setReportData(report.data);
     });
   };
+
+  useEffect(() => {
+    console.log(reports);
+  }, []);
 
   return (
     <Box backgroundColor="blue">

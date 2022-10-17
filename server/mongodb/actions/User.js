@@ -2,13 +2,13 @@ import bcrypt from "bcryptjs";
 import mongoDB from "../index";
 import User from "../models/User";
 
-export async function login({ username, password }) {
-  if (username == null || password == null) {
+export async function login({ email, password }) {
+  if (email == null || password == null) {
     throw new Error("All parameters must be provided!");
   }
   await mongoDB();
 
-  const user = await User.findOne({ username });
+  const user = await User.findOne({ email });
 
   if (user != null) {
     const didMatch = await bcrypt.compare(password, user.password);
@@ -23,8 +23,8 @@ export async function login({ username, password }) {
   return user;
 }
 
-export async function signUp({ username, password }) {
-  if (username == null || password == null) {
+export async function signUp({ email, password }) {
+  if (email == null || password == null) {
     throw new Error("All parameters must be provided!");
   }
 
@@ -34,7 +34,7 @@ export async function signUp({ username, password }) {
     .hash(password, 10)
     .then((hashedPassword) =>
       User.create({
-        username,
+        email,
         password: hashedPassword,
       })
     )

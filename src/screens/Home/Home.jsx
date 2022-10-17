@@ -55,7 +55,7 @@ export default function Home() {
           <Box w="10"></Box>
           <Select
             placeholder="Select Quarter"
-            isRequired="true"
+            isRequired={true}
             onChange={(newQuarter) => setQuarter(newQuarter)}
           >
             <option value="1">Q1</option>

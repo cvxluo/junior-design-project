@@ -20,12 +20,13 @@ export default function Login() {
   const handleSubmitInfo = (e) => {
     e.preventDefault();
     if (mode === "Register") {
-      signUp(email, password).then((res) => {
-        console.log(res);
+      signUp(email, password).then(() => {
+        alert("Successfully created new user account");
+        setMode("To Login");
       });
     } else {
       signIn("credentials", {
-        username: email,
+        email: email,
         password: password,
         callbackUrl: "/",
       });
