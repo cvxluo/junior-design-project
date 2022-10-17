@@ -9,9 +9,9 @@ export async function getServerSideProps(context) {
     context.res,
     authOptions
   );
-  console.log(session);
+
   const reports = await getUserReports(session.user.email);
-  console.log(reports);
+
   return {
     props: {
       reports: JSON.parse(JSON.stringify(reports)),

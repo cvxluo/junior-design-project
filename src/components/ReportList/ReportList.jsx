@@ -11,8 +11,6 @@ import {
 import ReportModal from "./ReportModal";
 
 const ReportList = ({ reports }) => {
-  console.log(reports);
-
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (

@@ -14,7 +14,6 @@ import {
 const ReportModal = (props) => {
   const { isOpen, onClose, report } = props;
 
-  console.log("REPORT MODAL", report);
   return (
     <Box>
       <Modal isOpen={isOpen} onClose={onClose}>

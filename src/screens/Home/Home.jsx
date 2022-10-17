@@ -30,9 +30,6 @@ export default function Home() {
   const handleSubmit = async () => {
     const date_of_creation = new Date().toLocaleDateString();
     const session = await getSession();
-    console.log(session.user.email);
-    console.log(date_of_creation);
-    console.log(name, quarter, year, data);
     createReport({
       name,
       userEmail: session.user.email,
