@@ -17,10 +17,10 @@ export async function getReport(reportId) {
   return report;
 }
 
-export async function getUserReports(userEmail) {
+export async function getUserReports(email) {
   await mongoDB();
 
-  const reports = await ReportSchema.find({ email: userEmail });
+  const reports = await ReportSchema.find({ userEmail: email });
 
   return reports;
 }

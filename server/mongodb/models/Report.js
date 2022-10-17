@@ -5,9 +5,9 @@ const ReportSchema = new Schema({
     type: String,
     required: true,
   },
-  user: {
+  userEmail: {
     type: String,
-    required: true
+    required: true,
   },
   date_of_creation: {
     type: String,

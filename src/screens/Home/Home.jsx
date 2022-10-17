@@ -19,22 +19,30 @@ import NavBar from "../../components/NavBar";
 import { useState } from "react";
 
 import { createReport } from "../../actions/Report";
+import { getSession } from "next-auth/react";
 
 export default function Home() {
   const [name, setName] = useState("");
   const [quarter, setQuarter] = useState(0);
   const [year, setYear] = useState(0);
   const [data, setReportText] = useState("");
-  // const [user, setUser] = useState("");
-  // not sure how to setUser
-  let user = "placeholder";
-  const handleSubmit = () => {
-    let date_of_creation = new Date().toLocaleDateString();
-    createReport({ name, user, date_of_creation, quarter, year, data }).then(
-      (res) => {
-        alert("Successfully created report with id: " + res._id);
-      }
-    );
+
+  const handleSubmit = async () => {
+    const date_of_creation = new Date().toLocaleDateString();
+    const session = await getSession();
+    console.log(session.user.email);
+    console.log(date_of_creation);
+    console.log(name, quarter, year, data);
+    createReport({
+      name,
+      userEmail: session.user.email,
+      date_of_creation,
+      quarter,
+      year,
+      data,
+    }).then((res) => {
+      alert("Successfully created report with id: " + res._id);
+    });
   };
 
   return (
@@ -56,7 +64,7 @@ export default function Home() {
           <Select
             placeholder="Select Quarter"
             isRequired={true}
-            onChange={(newQuarter) => setQuarter(newQuarter)}
+            onChange={(event) => setQuarter(event.target.value)}
           >
             <option value="1">Q1</option>
             <option value="2">Q2</option>

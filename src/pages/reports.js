@@ -9,10 +9,12 @@ export async function getServerSideProps(context) {
     context.res,
     authOptions
   );
-  const reports = await getUserReports(session.email);
+  console.log(session);
+  const reports = await getUserReports(session.user.email);
+  console.log(reports);
   return {
     props: {
-      cards: JSON.parse(JSON.stringify(reports)),
+      reports: JSON.parse(JSON.stringify(reports)),
     },
   };
 }
