@@ -29,8 +29,8 @@ export default function Home() {
   // not sure how to setUser
   let user = "placeholder";
   const handleSubmit = () => {
-    let date_of_creation = new Date().toLocaleDateString();
-    createReport({ name, user, date_of_creation, quarter, year, data }).then(
+    let date_last_modified = new Date().toLocaleDateString();
+    createReport({ name, user, date_last_modified, quarter, year, data }).then(
       (res) => {
         alert("Successfully created report with id: " + res._id);
       }
