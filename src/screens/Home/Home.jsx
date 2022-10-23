@@ -25,11 +25,12 @@ export default function Home() {
   const [quarter, setQuarter] = useState(0);
   const [year, setYear] = useState(0);
   const [data, setReportText] = useState("");
+  let date_last_modified = new Date().toLocaleDateString();
+  let date = date_last_modified.split("/");
   // const [user, setUser] = useState("");
   // not sure how to setUser
   let user = "placeholder";
   const handleSubmit = () => {
-    let date_last_modified = new Date().toLocaleDateString();
     createReport({ name, user, date_last_modified, quarter, year, data }).then(
       (res) => {
         alert("Successfully created report with id: " + res._id);
@@ -63,8 +64,9 @@ export default function Home() {
           <Box w="20"></Box>
           <Text color="white">Year:</Text>
           <Box w="10"></Box>
+
           <Input
-            placeholder="Year"
+            placeholder={date[2]}
             value={year}
             onChange={(event) => setYear(event.target.value)}
           />
