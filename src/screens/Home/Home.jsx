@@ -21,12 +21,14 @@ import { useState } from "react";
 import { createReport } from "../../actions/Report";
 
 export default function Home() {
-  const [name, setName] = useState("");
-  const [quarter, setQuarter] = useState(0);
-  const [year, setYear] = useState(0);
-  const [data, setReportText] = useState("");
   let date_last_modified = new Date().toLocaleDateString();
   let date = date_last_modified.split("/");
+
+  const [name, setName] = useState("");
+  const [quarter, setQuarter] = useState(0);
+  const [year, setYear] = useState(date[2]);
+  const [data, setReportText] = useState("");
+
   // const [user, setUser] = useState("");
   // not sure how to setUser
   let user = "placeholder";
