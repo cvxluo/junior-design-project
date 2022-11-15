@@ -3,10 +3,13 @@ import { Box } from "@chakra-ui/react";
 
 import { useState } from "react";
 import { getReport } from "src/actions/Report";
+import ReportList from "src/components/ReportList";
 
 import NavBar from "../../components/NavBar/NavBar";
 
-export default function Reports() {
+export default function Reports(props) {
+  const { reports } = props;
+
   const [reportID, setReportID] = useState("");
   const [reportData, setReportData] = useState("");
 
@@ -35,6 +38,8 @@ export default function Reports() {
           Submit
         </Button>
         <Text>{reportData}</Text>
+
+        <ReportList reports={reports} />
       </VStack>
     </Box>
   );
