@@ -64,7 +64,14 @@ export default function Guidelines() {
           <TabPanels>
             <TabPanel>
               <VStack>
-                <InfoBox content={infoExample}></InfoBox>
+                <Box backgroundColor="#22527B" width="80vw" p="1.5em" color="#F1F1F1">
+                  <Heading>headings</Heading>
+                  <UnorderedList>
+                    <ListItem key={index}>
+                      <Text>{text}</Text>
+                     </ListItem>
+                  </UnorderedList>
+                </Box>
               </VStack>
             </TabPanel>
             <TabPanel>
