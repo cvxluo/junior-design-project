@@ -6,6 +6,10 @@ import {
   TabPanel,
   VStack,
   Center,
+  UnorderedList,
+  Heading,
+  ListItem,
+  Text,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 
