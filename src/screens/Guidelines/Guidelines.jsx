@@ -12,17 +12,6 @@ import { Box } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar/NavBar";
 import InfoBox from "src/components/InfoBox";
 
-const infoExample = {
-  title: "General Guidelines",
-  listContent: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  ],
-  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-};
-
 const infoDos = {
   title: "II. Do",
   listContent: [
