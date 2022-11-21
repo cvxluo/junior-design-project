@@ -23,9 +23,8 @@ const infoExample = {
   paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 };
 
-const infoDosDonts = {
-  title: "II. Do's and Don'ts",
-  paragraphContent: "Do:",
+const infoDos = {
+  title: "II. Do",
   listContent: [
     "Be honest on the report",
     "Take your time",
@@ -40,7 +39,10 @@ const infoDosDonts = {
     "Be error free (no misspellings, no extra spaces, correct capitalization",
     "Review previous reports, PIF, and UIF if applicable",
   ],
-  paragraphContent: "Don't:",
+};
+
+const infoDonts = {
+  title: "III. Dont:",
   listContent: [
     "Use prohibited statements",
     "Include additional duties unless focused toward the mission",
@@ -54,8 +56,8 @@ const infoDosDonts = {
   ],
 };
 
-const infoWordChoice = {
-  title: "III. Word Choice",
+const infoWordVivid = {
+  title: "IV. Vivid Words",
   paragraphContent: "Use vivid words to emphasize action and results. Examples of vivid words:",
   listContent: [
     "Cut",
@@ -75,7 +77,11 @@ const infoWordChoice = {
     "Dynamic",
     "Instituted",
   ],
-  paragraphContent: "Examples of mundane words:",
+};
+
+const infoWordMundane = {
+  title: "V. Mundane Words",
+  paragraphContent: "Avoid using mundane words as they are unspecific. Examples of mundane words:",
   listContent: [
     "Capable",
     "Dependable",
@@ -114,7 +120,7 @@ const infoBasics = {
 };
 
 const infoAcronyms = {
-  title: "IV. Acronyms",
+  title: "VI. Acronyms",
   paragraphContent: "The following are examples of some common acronyms that do not need to be written out:",
   listContent: [
     "ACC",
@@ -164,8 +170,12 @@ export default function Guidelines() {
           <TabPanels>
             <TabPanel>
               <VStack>
-                <InfoBox content={infoExample}></InfoBox>
-                <InfoBox content={infoExample}></InfoBox>
+                <InfoBox content={infoBasics}></InfoBox>
+                <InfoBox content={infoDos}></InfoBox>
+                <InfoBox content={infoDonts}></InfoBox>
+                <InfoBox content={infoWordVivid}></InfoBox>
+                <InfoBox content={infoWordMundane}></InfoBox>
+                <InfoBox content={infoAcronyms}></InfoBox>
               </VStack>
             </TabPanel>
             <TabPanel>
