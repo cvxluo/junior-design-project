@@ -18,7 +18,6 @@ const infoExample = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   ],
   paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 };
