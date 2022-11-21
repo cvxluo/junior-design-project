@@ -6,8 +6,6 @@ import {
   TabPanel,
   VStack,
   Center,
-  Text,
-  Divider,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 
