@@ -12,6 +12,17 @@ import { Box } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar/NavBar";
 import InfoBox from "src/components/InfoBox";
 
+const infoExample = {
+  title: "General Guidelines",
+  listContent: [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  ],
+  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+};
+
 const infoDos = {
   title: "II. Do",
   listContent: [
@@ -28,10 +39,11 @@ const infoDos = {
     "Be error free (no misspellings, no extra spaces, correct capitalization",
     "Review previous reports, PIF, and UIF if applicable",
   ],
+  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 };
 
 const infoDonts = {
-  title: "III. Dont:",
+  title: "III. Dont",
   listContent: [
     "Use prohibited statements",
     "Include additional duties unless focused toward the mission",
@@ -43,6 +55,7 @@ const infoDonts = {
     "Use more than one exclamation in a row",
     "Use 'fluffy' statements with no meat behind them",
   ],
+  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 };
 
 const infoWordVivid = {
@@ -66,6 +79,7 @@ const infoWordVivid = {
     "Dynamic",
     "Instituted",
   ],
+  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 };
 
 const infoWordMundane = {
@@ -90,6 +104,7 @@ const infoWordMundane = {
     "Fine",
     "Maintained",
   ],
+  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 };
 
 const infoBasics = {
@@ -106,6 +121,7 @@ const infoBasics = {
     "Stratify your descriptions",
     "Use common acronyms instead of writing them out",
   ],
+  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 };
 
 const infoAcronyms = {
@@ -116,6 +132,7 @@ const infoAcronyms = {
     "ACSC",
     "AEF",
   ],
+  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 };
 
 export default function Guidelines() {
