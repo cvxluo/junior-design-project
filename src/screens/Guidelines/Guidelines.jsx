@@ -22,6 +22,16 @@ const infoExample = {
   paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 };
 
+const infoExamples = {
+  title: "General Guidelines",
+  listContent: [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  ],
+  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+};
+
 export default function Guidelines() {
   return (
     <div>
@@ -64,7 +74,8 @@ export default function Guidelines() {
             <TabPanel>
               <VStack>
                 <InfoBox content={infoExample}></InfoBox>
-                <InfoBox content={infoExample}></InfoBox>
+                <InfoBox content={infoExamples}></InfoBox>
+                <InfoBox content={infoExamples}></InfoBox>
               </VStack>
             </TabPanel>
             <TabPanel>
