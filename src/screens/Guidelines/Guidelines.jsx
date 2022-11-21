@@ -23,12 +23,6 @@ const infoExample = {
   paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 };
 
-
-
-
-
-
-
 export default function Guidelines() {
   return (
     <div>
