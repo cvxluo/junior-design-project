@@ -160,11 +160,7 @@ export default function Guidelines() {
             <TabPanel>
               <VStack>
                 <InfoBox content={infoBasics}></InfoBox>
-                <InfoBox content={infoDos}></InfoBox>
-                <InfoBox content={infoDonts}></InfoBox>
-                <InfoBox content={infoWordVivid}></InfoBox>
-                <InfoBox content={infoWordMundane}></InfoBox>
-                <InfoBox content={infoAcronyms}></InfoBox>
+                
               </VStack>
             </TabPanel>
             <TabPanel>
