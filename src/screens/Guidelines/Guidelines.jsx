@@ -10,7 +10,6 @@ import {
   Heading,
   ListItem,
   Text,
-  Box,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 
@@ -72,9 +71,7 @@ export default function Guidelines() {
                 <Box backgroundColor="#22527B" width="80vw" p="1.5em" color="#F1F1F1">
                   <Heading>headings</Heading>
                   <UnorderedList>
-                    <ListItem>
-                      <Text>texthere</Text>
-                     </ListItem>
+                    <ListItem>list item 1</ListItem>
                   </UnorderedList>
                 </Box>
               </VStack>
