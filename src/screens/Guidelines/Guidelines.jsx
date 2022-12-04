@@ -46,6 +46,28 @@ const infoDonts = {
   ],
   paragraphContent: " ",
 };
+const infoWordChoice1 = {
+  title: "IV. Good Words to Use:",
+  listContent: [
+    "Cut",
+    "Saved",
+    "Created",
+    "Drove",
+    "Guaranteed",
+    "Infuseed",
+    "Led",
+    "Spearheaded",
+    "Developed",
+    "Deftly",
+    "Diplomatically",
+    "Energetic",
+    "Rapidly",
+    "Persuasive",
+    "Dynamic",
+    "Instituted",
+  ],
+  paragraphContent: "Use vivid words to emphasize action and results.",
+};
 
 const infoBasics = {
   title: "I. The Basics",
@@ -119,6 +141,7 @@ export default function Guidelines() {
                 <InfoBox content={infoBasics}></InfoBox>
                 <InfoBox content={infoDos}></InfoBox>
                 <InfoBox content={infoDonts}></InfoBox>
+                <InfoBox content={infoWordChoice1}></InfoBox>
               </VStack>
             </TabPanel>
             <TabPanel>
