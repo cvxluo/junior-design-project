@@ -30,6 +30,24 @@ const infoDos = {
   ],
   paragraphContent: " ",
 };
+
+const infoBasics = {
+  title: "I. The Basics",
+  listContent: [
+    "Review the ratee's previous performance reports",
+    "Gather input from the ratee in advance",
+    "Don't use prohibited statements (see section xx)",
+    "Take the time to write a quality report",
+    "Proofread your product",
+    "Follow the do's and don'ts",
+    "Use strong word choice",
+    "Provide context",
+    "Stratify your descriptions",
+    "Use common acronyms instead of writing them out",
+  ],
+  paragraphContent: " ",
+};
+
 const infoExample = {
   title: "General Guidelines",
   listContent: [
@@ -82,8 +100,8 @@ export default function Guidelines() {
           <TabPanels>
             <TabPanel>
               <VStack>
+                <InfoBox content={infoBasics}></InfoBox>
                 <InfoBox content={infoDos}></InfoBox>
-                <InfoBox content={infoExample}></InfoBox>
               </VStack>
             </TabPanel>
             <TabPanel>
