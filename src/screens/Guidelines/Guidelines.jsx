@@ -13,7 +13,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import InfoBox from "src/components/InfoBox";
 
 const infoDos = {
-  title: "II. Do's",
+  title: "II. Do:",
   listContent: [
     "Be honest on the report",
     "Take your time",
@@ -27,6 +27,22 @@ const infoDos = {
     "Abbreviate words like gov't for goverment in the interest of space",
     "Be error free (no misspellings, no extra spaces, correct capitalization",
     "Review previous reports, PIF, and UIF if applicable",
+  ],
+  paragraphContent: " ",
+};
+
+const infoDonts = {
+  title: "III. Don't:",
+  listContent: [
+    "Use prohibited statements",
+    "Include additional duties unless focused toward the mission",
+    "Use terminology only your organization understands",
+    "Leave white space, unless, of course, you're trying to send a negative message",
+    "Put your credibility on the line (don't rate everyone #1 if they aren't)",
+    "Use 'all caps' for emphasis",
+    "Use periods after bullets",
+    "Use more than one exclamation in a row",
+    "Use 'fluffy' statements with no meat behind them",
   ],
   paragraphContent: " ",
 };
@@ -102,6 +118,7 @@ export default function Guidelines() {
               <VStack>
                 <InfoBox content={infoBasics}></InfoBox>
                 <InfoBox content={infoDos}></InfoBox>
+                <InfoBox content={infoDonts}></InfoBox>
               </VStack>
             </TabPanel>
             <TabPanel>
