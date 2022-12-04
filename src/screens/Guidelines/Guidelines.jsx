@@ -66,7 +66,31 @@ const infoWordChoice1 = {
     "Dynamic",
     "Instituted",
   ],
-  paragraphContent: "Use vivid words to emphasize action and results.",
+  paragraphContent: "Use vivid words to emphasize action and results",
+};
+
+const infoWordChoice2 = {
+  title: "IV. Mundane Words:",
+  listContent: [
+    "Capable",
+    "Dependable",
+    "Effective",
+    "Coordinated",
+    "Sturdy",
+    "Monitored",
+    "Assisted",
+    "Aided",
+    "Contributed",
+    "Employed",
+    "Ready",
+    "Pontential",
+    "Participated",
+    "Reviewed",
+    "Adequate",
+    "Fine",
+    "Maintained",
+  ],
+  paragraphContent: "Mundane words should be avoided as they are unspecific",
 };
 
 const infoBasics = {
