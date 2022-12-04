@@ -154,6 +154,9 @@ export default function Home() {
               <ListItem>dept: department</ListItem>
               <ListItem>op: operation</ListItem>
             </UnorderedList>
+            <Button m="1em" colorScheme="gray">
+              Add
+            </Button>
           </GridItem>
         </Grid>
       </VStack>

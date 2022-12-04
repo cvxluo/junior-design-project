@@ -70,7 +70,7 @@ const infoWordChoice1 = {
 };
 
 const infoWordChoice2 = {
-  title: "IV. Mundane Words:",
+  title: "V. Mundane Words:",
   paragraphContent: "Mundane words should be avoided as they are unspecific",
   listContent: [
     "Capable",
