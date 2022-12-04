@@ -14,6 +14,7 @@ import InfoBox from "src/components/InfoBox";
 
 const infoDos = {
   title: "II. Do:",
+  paragraphContent: " ",
   listContent: [
     "Be honest on the report",
     "Take your time",
@@ -28,11 +29,11 @@ const infoDos = {
     "Be error free (no misspellings, no extra spaces, correct capitalization",
     "Review previous reports, PIF, and UIF if applicable",
   ],
-  paragraphContent: " ",
 };
 
 const infoDonts = {
   title: "III. Don't:",
+  paragraphContent: " ",
   listContent: [
     "Use prohibited statements",
     "Include additional duties unless focused toward the mission",
@@ -44,10 +45,10 @@ const infoDonts = {
     "Use more than one exclamation in a row",
     "Use 'fluffy' statements with no meat behind them",
   ],
-  paragraphContent: " ",
 };
 const infoWordChoice1 = {
   title: "IV. Good Words to Use:",
+  paragraphContent: "Use vivid words to emphasize action and results",
   listContent: [
     "Cut",
     "Saved",
@@ -66,11 +67,11 @@ const infoWordChoice1 = {
     "Dynamic",
     "Instituted",
   ],
-  paragraphContent: "Use vivid words to emphasize action and results",
 };
 
 const infoWordChoice2 = {
   title: "IV. Mundane Words:",
+  paragraphContent: "Mundane words should be avoided as they are unspecific",
   listContent: [
     "Capable",
     "Dependable",
@@ -90,11 +91,11 @@ const infoWordChoice2 = {
     "Fine",
     "Maintained",
   ],
-  paragraphContent: "Mundane words should be avoided as they are unspecific",
 };
 
 const infoBasics = {
   title: "I. The Basics",
+  paragraphContent: " ",
   listContent: [
     "Review the ratee's previous performance reports",
     "Gather input from the ratee in advance",
@@ -107,18 +108,6 @@ const infoBasics = {
     "Stratify your descriptions",
     "Use common acronyms instead of writing them out",
   ],
-  paragraphContent: " ",
-};
-
-const infoExample = {
-  title: "General Guidelines",
-  listContent: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  ],
-  paragraphContent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 };
 
 export default function Guidelines() {
@@ -170,7 +159,7 @@ export default function Guidelines() {
             </TabPanel>
             <TabPanel>
               <VStack>
-                <InfoBox content={infoExample}></InfoBox>
+                <InfoBox content={infoBasics}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
