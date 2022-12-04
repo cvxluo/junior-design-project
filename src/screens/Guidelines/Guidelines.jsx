@@ -155,6 +155,7 @@ export default function Guidelines() {
                 <InfoBox content={infoDos}></InfoBox>
                 <InfoBox content={infoDonts}></InfoBox>
                 <InfoBox content={infoWordChoice1}></InfoBox>
+                <InfoBox content={infoWordChoice2}></InfoBox>
               </VStack>
             </TabPanel>
             <TabPanel>
