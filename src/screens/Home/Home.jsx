@@ -65,8 +65,6 @@ export default function Home() {
   const handleFormat = async () => {
     const lines = data.split("\n");
     const newAlerts = [];
-    const session = await getSession();
-    console.log(session);
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
@@ -104,7 +102,6 @@ export default function Home() {
     }
 
     setAlerts(newAlerts);
-    console.log(lines.join("\n"));
     setReportText(lines.join("\n"));
   };
 
