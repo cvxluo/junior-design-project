@@ -112,7 +112,7 @@ const infoBasics = {
 
 const oprFundamentals = {
   title: "I. Fundamentals",
-  paragraphContent: "The purpose of the Enlisted Performance Report is to provide a reliable, long-term, cumulative record of performance and potential, based on performance for enlisted personnel",
+  paragraphContent: " ",
   listContent: [
     "Think ahead (ex. keep a log of the ratee's accomplishments throughout the period)",
     "Take time to write a good report",
