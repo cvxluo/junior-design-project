@@ -165,6 +165,21 @@ const oprFundamentals = {
   ],
 };
 
+const oprWritingTips = {
+  title: "II. Writing Tips",
+  paragraphContent: " ",
+  listContent: [
+    "Focus on duty performance",
+    "Clearly illustrate both abilities and potential",
+    "Record performance in dynamic terms",
+    "Focus on results, not just activity",
+    "Use term understood across the Air Force",
+    "Focus on primary duty performance rather than additional duties",
+    "Stratify statements to highlight top performers",
+    "Include PME/Assignment recommendation if applicable",
+  ],
+};
+
 export default function Guidelines() {
   return (
     <div>
@@ -223,6 +238,7 @@ export default function Guidelines() {
             <TabPanel>
               <VStack>
                 <InfoBox content={oprFundamentals}></InfoBox>
+                <InfoBox content={oprWritingTips}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
