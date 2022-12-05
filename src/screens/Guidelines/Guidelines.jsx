@@ -191,6 +191,26 @@ const oprVeiledPromotion = {
   ],
 };
 
+const eprEx = {
+  title: "EPR Example",
+  paragraphContent: " ",
+  listContent: [
+    "My #1 of 5 SNCOs--proactive leader--exemplary supervisor who led the busiest section in the division",
+    "Established long-term programs to improve support to customers--stockage and issue effectiveness",
+    " ratings were consistently highest in command and top 5 in Air Force throughout year--visionary manager",
+    "   His team virtually eliminated out-of-stock situations for customers--herculean effort made to look easy",
+    "   Led section to new heights in all process performance indicators--team continued to exceed every goal",
+    "Modernized section's outdated process for tracking late products--on-time rate now at 100% for first time",
+    "Devoted two nights a week of off-duty time to ensure the unit's training requirements were met--unselfish",
+    "   All three of his trainees fully qualified in minimum time--significantly improved section's effectiveness",
+    "Eliminated over $6 million in serviceable excess inventory in only four months as key member of quality",
+    " improved team--surpassed expectations--hands-on leadership was the catalyst for the entire effort",
+    "	Simultaneously reduced over $320,000 in due-in excess--greatest decrease in the division's history",
+    "Model community leader--President, local food pantry--volunteered off-duty time regularly in soup kitchen",
+    "Leader, motivator, skilled tactician--leads the pack--keep him in the front--promote to SMSgt now!",
+  ],
+};
+
 export default function Guidelines() {
   return (
     <div>
@@ -251,6 +271,11 @@ export default function Guidelines() {
                 <InfoBox content={oprFundamentals}></InfoBox>
                 <InfoBox content={oprWritingTips}></InfoBox>
                 <InfoBox content={oprVeiledPromotion}></InfoBox>
+              </VStack>
+            </TabPanel>
+            <TabPanel>
+              <VStack>
+                <InfoBox content={eprEx}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
