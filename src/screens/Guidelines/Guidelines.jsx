@@ -211,6 +211,22 @@ const eprEx = {
   ],
 };
 
+const oprEx = {
+  title: "OPR Example",
+  paragraphContent: " ",
+  listContent: [
+    "Led efforts that resulted in historic gains for our Airmen and kept AF readiness at the forefront in congress",
+    "	Spearheaded quality of life improvements--pay table reform, retirement redux repeal, significant pay raise",
+    "	Garnered over $200M for new family housing, $225M for housing allowances, and increased bonuses",
+    "Developed MAJCOM Top Readiness Concerns brief for OSD--provided the real story on AF readiness",
+    "Guided analysis of impact of long-term contingency operations on Air Force people, budget, and equipment",
+    "Protected programs vital to AF future--AF lead for C-5 engine upgrade, $200M effort--flawless execution",
+    "Authored $10M budget proposal and defended to congress on the Hill--program fully funded as a result",
+    "Forged DoD-wide definition of TEMPO for $100M Congressional Report on Personnel TEMPO legislation",
+    "Advised CSAF on Aerospace Expeditionary Force readiness prior to deployment--impacted all AEF units",
+  ],
+};
+
 export default function Guidelines() {
   return (
     <div>
@@ -276,6 +292,7 @@ export default function Guidelines() {
             <TabPanel>
               <VStack>
                 <InfoBox content={eprEx}></InfoBox>
+                <InfoBox content={oprEx}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
