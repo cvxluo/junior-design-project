@@ -1,4 +1,7 @@
 import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
   VStack,
   Center,
   Text,
@@ -27,6 +30,8 @@ export default function Home() {
   const [year, setYear] = useState(0);
   const [data, setReportText] = useState("");
 
+  const [alerts, setAlerts] = useState([]);
+
   const handleSubmit = async () => {
     const date_of_creation = new Date().toLocaleDateString();
     const session = await getSession();
@@ -37,9 +42,65 @@ export default function Home() {
       quarter,
       year,
       data,
-    }).then((res) => {
-      alert("Successfully created report with id: " + res._id);
-    });
+    })
+      .then((res) => {
+        setAlerts([
+          {
+            type: "success",
+            text: "Successfully created report with id: " + res._id,
+          },
+        ]);
+      })
+      .catch((err) => {
+        setAlerts([
+          {
+            type: "error",
+            text: "Error creating report: " + err,
+          },
+        ]);
+      });
+  };
+
+  const handleFormat = async () => {
+    const lines = data.split("\n");
+    const newAlerts = [];
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      // Add bullet point if line doesn't start with one
+      if (line[0] != "-" && line.length > 1) {
+        lines[i] = "- " + line;
+      }
+      lines[i] = lines[i].replace("because", "b/c");
+      lines[i] = lines[i].replace("with", "w/");
+      lines[i] = lines[i].replace("without", "w/out");
+      lines[i] = lines[i].replace("department", "dept");
+      lines[i] = lines[i].replace("operation", "op");
+
+      if (line.length > 100) {
+        newAlerts.push({
+          type: "warning",
+          text: "Line " + (i + 1) + " is long - consider shortening it",
+        });
+      }
+
+      if (line.includes("  ")) {
+        newAlerts.push({
+          type: "warning",
+          text: "Line " + (i + 1) + " contains double spaces",
+        });
+      }
+
+      if (line[-1] != ".") {
+        newAlerts.push({
+          type: "error",
+          text: "Line " + (i + 1) + " does not end with a period",
+        });
+      }
+    }
+
+    setAlerts(newAlerts);
+    setReportText(lines.join("\n"));
   };
 
   return (
@@ -93,10 +154,20 @@ export default function Home() {
           onChange={(event) => setReportText(event.target.value)}
         />
         <Center>
-          <Button m="1em">Check</Button>
+          <Button m="1em" onClick={handleFormat}>
+            Format
+          </Button>
           <Button m="1em" onClick={handleSubmit}>
             Export
           </Button>
+        </Center>
+        <Center>
+          {alerts.map((alert) => (
+            <Alert status={alert.type} key={alert.text}>
+              <AlertIcon />
+              <AlertTitle mr={2}>{alert.text}</AlertTitle>
+            </Alert>
+          ))}
         </Center>
 
         <Grid
@@ -135,9 +206,6 @@ export default function Home() {
               <ListItem>dept: department</ListItem>
               <ListItem>op: operation</ListItem>
             </UnorderedList>
-            <Button m="1em" colorScheme="gray">
-              Add
-            </Button>
           </GridItem>
         </Grid>
       </VStack>

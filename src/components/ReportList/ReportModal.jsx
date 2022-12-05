@@ -29,7 +29,6 @@ const ReportModal = (props) => {
           </ModalBody>
 
           <ModalFooter>
-            <Button variant="ghost">Edit</Button>
             <Button backgroundColor="lightblue" mr={3} onClick={onClose}>
               Close
             </Button>

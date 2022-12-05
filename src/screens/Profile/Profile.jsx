@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   VStack,
   Text,
@@ -14,8 +15,15 @@ import NavBar from "../../components/NavBar/NavBar";
 
 import urls from "utils/urls";
 import { signOut } from "next-auth/react";
+import { useEffect } from "react";
+import { getSession } from "next-auth/react";
 
 export default function Profile() {
+  const [email, setEmail] = useState("");
+
+  useEffect(() => {
+    getSession().then((session) => setEmail(session.user.email));
+  }, []);
   const handleLogout = (e) => {
     e.preventDefault();
     signOut();
@@ -34,29 +42,11 @@ export default function Profile() {
             <VStack alignItems="start">
               <Box p="5">
                 <Text fontSize="2xl" fontWeight="bold" color="lightgray">
-                  Name
-                </Text>
-                <Text fontSize="lg" color="lightgray">
-                  John Doe
-                </Text>
-              </Box>
-              <Box p="5">
-                <Text fontSize="2xl" fontWeight="bold" color="lightgray">
                   Primary Email
                 </Text>
                 <Text fontSize="lg" color="lightgray">
-                  johndoe@gmail.com
+                  {email}
                 </Text>
-                <Button size="sm">Change</Button>
-              </Box>
-              <Box p="5">
-                <Text fontSize="2xl" fontWeight="bold" color="lightgray">
-                  Secondary Email
-                </Text>
-                <Text fontSize="lg" color="lightgray">
-                  johndoe@yahoo.com
-                </Text>
-                <Button size="sm">Change</Button>
               </Box>
               <Box p="5">
                 <Text fontSize="2xl" fontWeight="bold" color="lightgray">
