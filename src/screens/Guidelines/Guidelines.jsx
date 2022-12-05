@@ -152,6 +152,19 @@ const eprPromotions = {
   ],
 };
 
+const oprFundamentals = {
+  title: "I. Fundamentals",
+  paragraphContent: " ",
+  listContent: [
+    "OPR should assess duty performance and performance reflect the leadership",
+    "Do not consider previous Promotion Recomendation Form recommendations or promotion elegibility",
+    "Do not consider non-work related statuses/activities",
+    "Promotion recommendations are prohibited",
+    "Recommendations to attend the next level of PME or next assignment are permitted",
+    "Include incident(s)/negative trait(s) that warrant documentation to hold a member accountable",
+  ],
+};
+
 export default function Guidelines() {
   return (
     <div>
@@ -205,6 +218,11 @@ export default function Guidelines() {
                 <InfoBox content={eprFundamentals}></InfoBox>
                 <InfoBox content={eprWritingTips}></InfoBox>
                 <InfoBox content={eprPromotions}></InfoBox>
+              </VStack>
+            </TabPanel>
+            <TabPanel>
+              <VStack>
+                <InfoBox content={oprFundamentals}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
