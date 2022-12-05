@@ -99,7 +99,7 @@ const infoBasics = {
   listContent: [
     "Review the ratee's previous performance reports",
     "Gather input from the ratee in advance",
-    "Don't use prohibited statements (see section xx)",
+    "Don't use prohibited statements",
     "Take the time to write a quality report",
     "Proofread your product",
     "Follow the do's and don'ts",
@@ -107,6 +107,23 @@ const infoBasics = {
     "Provide context",
     "Stratify your descriptions",
     "Use common acronyms instead of writing them out",
+  ],
+};
+
+const oprFundamentals = {
+  title: "I. Fundamentals",
+  paragraphContent: " ",
+  listContent: [
+    "Think ahead (ex. keep a log of the ratee's accomplishments throughout the period)",
+    "Take time to write a good report",
+    "Write and proofread in private",
+    "Do not discuss ratings with the ratee before the report is on record",
+    "Do not overrate",
+    "Avoid highlighting a single, non-severe incident",
+    "Do not underrate in order to show improvement in later performance reports",
+    "Before writing, determine which promotion category the person fits",
+    "Use of a 'promote' statement sends a strong statement -- use it wisely",
+    "Avoid nicknames, calls signs, or code names",
   ],
 };
 
@@ -160,7 +177,7 @@ export default function Guidelines() {
             </TabPanel>
             <TabPanel>
               <VStack>
-                <InfoBox content={infoBasics}></InfoBox>
+                <InfoBox content={oprFundamentals}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
