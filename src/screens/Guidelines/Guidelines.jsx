@@ -140,6 +140,18 @@ const oprWritingTips = {
   ],
 };
 
+const oprPromotions = {
+  title: "III. Promotion Categories",
+  paragraphContent: " ",
+  listContent: [
+    "1: Not recommended for promotion",
+    "2: Not recommended for promotion at this time",
+    "3: Consider for promotion",
+    "4: Ready for promotion",
+    "5: Ready for immediate promotion",
+  ],
+};
+
 export default function Guidelines() {
   return (
     <div>
