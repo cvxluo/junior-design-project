@@ -110,6 +110,48 @@ const infoBasics = {
   ],
 };
 
+const eprFundamentals = {
+  title: "I. Fundamentals",
+  paragraphContent: " ",
+  listContent: [
+    "Think ahead (ex. keep a log of the ratee's accomplishments throughout the period)",
+    "Take time to write a good report",
+    "Write and proofread in private",
+    "Do not discuss ratings with the ratee before the report is on record",
+    "Do not overrate",
+    "Avoid highlighting a single, non-severe incident",
+    "Do not underrate in order to show improvement in later performance reports",
+    "Before writing, determine which promotion category the person fits",
+    "Use of a 'promote' statement sends a strong statement -- use it wisely",
+    "Avoid nicknames, calls signs, or code names",
+  ],
+};
+
+const eprWritingTips = {
+  title: "II. Writing Tips",
+  paragraphContent: " ",
+  listContent: [
+    "Did the member initiate, develop, implement, and follow through with a new plan, project, or program?",
+    "Did the member chair any meetings, committees, or subcommittees related to duty performance?",
+    "Did the individual volunteer for any projects, additional duties, community involvement, or extracurricular activities?",
+    "What recognition (awards, letters of appreciation, etc.) did the individual recieve?",
+    "How did the individual save money, time, or resources in the office?",
+    "What type of leader, both on and off duty, is the individual?",
+  ],
+};
+
+const eprPromotions = {
+  title: "III. Promotion Categories",
+  paragraphContent: " ",
+  listContent: [
+    "1: Not recommended for promotion",
+    "2: Not recommended for promotion at this time",
+    "3: Consider for promotion",
+    "4: Ready for promotion",
+    "5: Ready for immediate promotion",
+  ],
+};
+
 export default function Guidelines() {
   return (
     <div>
@@ -160,7 +202,9 @@ export default function Guidelines() {
             </TabPanel>
             <TabPanel>
               <VStack>
-                <InfoBox content={infoBasics}></InfoBox>
+                <InfoBox content={eprFundamentals}></InfoBox>
+                <InfoBox content={eprWritingTips}></InfoBox>
+                <InfoBox content={eprPromotions}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
