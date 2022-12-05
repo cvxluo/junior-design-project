@@ -238,8 +238,8 @@ export default function Guidelines() {
                 <InfoBox content={infoDonts}></InfoBox>
                 <InfoBox content={infoWordChoice1}></InfoBox>
                 <InfoBox content={infoWordChoice2}></InfoBox>
-                <Text>Reference: EPR/OPR/PRF WRITING GUIDE</Text>
-                <Text>HQ Air Reserve Personnel Center/HQ Air Force Reserve Command, November 2005</Text>
+                <Text color="white">Reference: EPR/OPR/PRF WRITING GUIDE</Text>
+                <Text color="white">HQ Air Reserve Personnel Center/HQ Air Force Reserve Command, November 2005</Text>
               </VStack>
             </TabPanel>
             <TabPanel>
