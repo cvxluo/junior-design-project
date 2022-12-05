@@ -2,7 +2,6 @@ import {
   Alert,
   AlertIcon,
   AlertTitle,
-  AlertDescription,
   VStack,
   Center,
   Text,
@@ -68,7 +67,6 @@ export default function Home() {
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      const words = line.split(" ");
       // Add bullet point if line doesn't start with one
       if (line[0] != "-" && line.length > 1) {
         lines[i] = "- " + line;
