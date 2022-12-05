@@ -24,20 +24,6 @@ export default function Reports(props) {
       <NavBar />
       <VStack backgroundColor="blue">
         <Box h="10"> </Box>
-        <Center>
-          <Text color="white" m="0 1em" fontWeight="bold">
-            Enter the ID of the report you want to see:
-          </Text>
-          <Input
-            placeholder="Name"
-            value={reportID}
-            onChange={(event) => setReportID(event.target.value)}
-          />
-        </Center>
-        <Button m="1em" onClick={handleSubmit}>
-          Submit
-        </Button>
-        <Text>{reportData}</Text>
 
         <ReportList reports={reports} />
       </VStack>
