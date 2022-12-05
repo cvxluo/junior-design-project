@@ -110,7 +110,7 @@ const infoBasics = {
   ],
 };
 
-const oprFundamentals = {
+const eprFundamentals = {
   title: "I. Fundamentals",
   paragraphContent: " ",
   listContent: [
@@ -127,7 +127,7 @@ const oprFundamentals = {
   ],
 };
 
-const oprWritingTips = {
+const eprWritingTips = {
   title: "II. Writing Tips",
   paragraphContent: " ",
   listContent: [
@@ -140,7 +140,7 @@ const oprWritingTips = {
   ],
 };
 
-const oprPromotions = {
+const eprPromotions = {
   title: "III. Promotion Categories",
   paragraphContent: " ",
   listContent: [
@@ -202,9 +202,9 @@ export default function Guidelines() {
             </TabPanel>
             <TabPanel>
               <VStack>
-                <InfoBox content={oprFundamentals}></InfoBox>
-                <InfoBox content={oprWritingTips}></InfoBox>
-                <InfoBox content={oprPromotions}></InfoBox>
+                <InfoBox content={eprFundamentals}></InfoBox>
+                <InfoBox content={eprWritingTips}></InfoBox>
+                <InfoBox content={eprPromotions}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
