@@ -152,6 +152,45 @@ const eprPromotions = {
   ],
 };
 
+const oprFundamentals = {
+  title: "I. Fundamentals",
+  paragraphContent: " ",
+  listContent: [
+    "OPR should assess duty performance and performance reflect the leadership",
+    "Do not consider previous Promotion Recomendation Form recommendations or promotion elegibility",
+    "Do not consider non-work related statuses/activities",
+    "Promotion recommendations are prohibited",
+    "Recommendations to attend the next level of PME or next assignment are permitted",
+    "Include incident(s)/negative trait(s) that warrant documentation to hold a member accountable",
+  ],
+};
+
+const oprWritingTips = {
+  title: "II. Writing Tips",
+  paragraphContent: " ",
+  listContent: [
+    "Focus on duty performance",
+    "Clearly illustrate both abilities and potential",
+    "Record performance in dynamic terms",
+    "Focus on results, not just activity",
+    "Use term understood across the Air Force",
+    "Focus on primary duty performance rather than additional duties",
+    "Stratify statements to highlight top performers",
+    "Include PME/Assignment recommendation if applicable",
+  ],
+};
+
+const oprVeiledPromotion = {
+  title: "III. Prohibited Promotion Statement Examples",
+  paragraphContent: " ",
+  listContent: [
+    "Lt Col X is senior officer material",
+    "Capt X has excelled in a Major's billet",
+    "Major X should be a group commander now",
+    "Capt X is ready for our toughest field grade jobs",
+  ],
+};
+
 export default function Guidelines() {
   return (
     <div>
@@ -205,6 +244,13 @@ export default function Guidelines() {
                 <InfoBox content={eprFundamentals}></InfoBox>
                 <InfoBox content={eprWritingTips}></InfoBox>
                 <InfoBox content={eprPromotions}></InfoBox>
+              </VStack>
+            </TabPanel>
+            <TabPanel>
+              <VStack>
+                <InfoBox content={oprFundamentals}></InfoBox>
+                <InfoBox content={oprWritingTips}></InfoBox>
+                <InfoBox content={oprVeiledPromotion}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
