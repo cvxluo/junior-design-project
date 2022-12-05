@@ -29,6 +29,7 @@ const ReportList = ({ reports }) => {
               onClose={onClose}
               report={{ name, data, date_of_creation, quarter, year }}
             />
+            <Box h="1em" />
           </ListItem>
         ))}
       </UnorderedList>
