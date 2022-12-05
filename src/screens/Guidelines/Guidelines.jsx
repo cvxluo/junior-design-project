@@ -204,6 +204,7 @@ export default function Guidelines() {
               <VStack>
                 <InfoBox content={oprFundamentals}></InfoBox>
                 <InfoBox content={oprWritingTips}></InfoBox>
+                <InfoBox content={oprPromotions}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
