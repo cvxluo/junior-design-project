@@ -191,6 +191,42 @@ const oprVeiledPromotion = {
   ],
 };
 
+const eprEx = {
+  title: "EPR Example",
+  paragraphContent: " ",
+  listContent: [
+    "My #1 of 5 SNCOs--proactive leader--exemplary supervisor who led the busiest section in the division",
+    "Established long-term programs to improve support to customers--stockage and issue effectiveness",
+    " ratings were consistently highest in command and top 5 in Air Force throughout year--visionary manager",
+    "   His team virtually eliminated out-of-stock situations for customers--herculean effort made to look easy",
+    "   Led section to new heights in all process performance indicators--team continued to exceed every goal",
+    "Modernized section's outdated process for tracking late products--on-time rate now at 100% for first time",
+    "Devoted two nights a week of off-duty time to ensure the unit's training requirements were met--unselfish",
+    "   All three of his trainees fully qualified in minimum time--significantly improved section's effectiveness",
+    "Eliminated over $6 million in serviceable excess inventory in only four months as key member of quality",
+    " improved team--surpassed expectations--hands-on leadership was the catalyst for the entire effort",
+    "	Simultaneously reduced over $320,000 in due-in excess--greatest decrease in the division's history",
+    "Model community leader--President, local food pantry--volunteered off-duty time regularly in soup kitchen",
+    "Leader, motivator, skilled tactician--leads the pack--keep him in the front--promote to SMSgt now!",
+  ],
+};
+
+const oprEx = {
+  title: "OPR Example",
+  paragraphContent: " ",
+  listContent: [
+    "Led efforts that resulted in historic gains for our Airmen and kept AF readiness at the forefront in congress",
+    "	Spearheaded quality of life improvements--pay table reform, retirement redux repeal, significant pay raise",
+    "	Garnered over $200M for new family housing, $225M for housing allowances, and increased bonuses",
+    "Developed MAJCOM Top Readiness Concerns brief for OSD--provided the real story on AF readiness",
+    "Guided analysis of impact of long-term contingency operations on Air Force people, budget, and equipment",
+    "Protected programs vital to AF future--AF lead for C-5 engine upgrade, $200M effort--flawless execution",
+    "Authored $10M budget proposal and defended to congress on the Hill--program fully funded as a result",
+    "Forged DoD-wide definition of TEMPO for $100M Congressional Report on Personnel TEMPO legislation",
+    "Advised CSAF on Aerospace Expeditionary Force readiness prior to deployment--impacted all AEF units",
+  ],
+};
+
 export default function Guidelines() {
   return (
     <div>
@@ -241,6 +277,13 @@ export default function Guidelines() {
             </TabPanel>
             <TabPanel>
               <VStack>
+                <InfoBox content={oprFundamentals}></InfoBox>
+                <InfoBox content={oprWritingTips}></InfoBox>
+                <InfoBox content={oprVeiledPromotion}></InfoBox>
+              </VStack>
+            </TabPanel>
+            <TabPanel>
+              <VStack>
                 <InfoBox content={eprFundamentals}></InfoBox>
                 <InfoBox content={eprWritingTips}></InfoBox>
                 <InfoBox content={eprPromotions}></InfoBox>
@@ -248,9 +291,8 @@ export default function Guidelines() {
             </TabPanel>
             <TabPanel>
               <VStack>
-                <InfoBox content={oprFundamentals}></InfoBox>
-                <InfoBox content={oprWritingTips}></InfoBox>
-                <InfoBox content={oprVeiledPromotion}></InfoBox>
+                <InfoBox content={eprEx}></InfoBox>
+                <InfoBox content={oprEx}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
