@@ -277,16 +277,16 @@ export default function Guidelines() {
             </TabPanel>
             <TabPanel>
               <VStack>
-                <InfoBox content={eprFundamentals}></InfoBox>
-                <InfoBox content={eprWritingTips}></InfoBox>
-                <InfoBox content={eprPromotions}></InfoBox>
+                <InfoBox content={oprFundamentals}></InfoBox>
+                <InfoBox content={oprWritingTips}></InfoBox>
+                <InfoBox content={oprVeiledPromotion}></InfoBox>
               </VStack>
             </TabPanel>
             <TabPanel>
               <VStack>
-                <InfoBox content={oprFundamentals}></InfoBox>
-                <InfoBox content={oprWritingTips}></InfoBox>
-                <InfoBox content={oprVeiledPromotion}></InfoBox>
+                <InfoBox content={eprFundamentals}></InfoBox>
+                <InfoBox content={eprWritingTips}></InfoBox>
+                <InfoBox content={eprPromotions}></InfoBox>
               </VStack>
             </TabPanel>
             <TabPanel>
