@@ -99,7 +99,7 @@ const infoBasics = {
   listContent: [
     "Review the ratee's previous performance reports",
     "Gather input from the ratee in advance",
-    "Don't use prohibited statements",
+    "Don't use prohibited statements (see section xx)",
     "Take the time to write a quality report",
     "Proofread your product",
     "Follow the do's and don'ts",
@@ -124,6 +124,19 @@ const oprFundamentals = {
     "Before writing, determine which promotion category the person fits",
     "Use of a 'promote' statement sends a strong statement -- use it wisely",
     "Avoid nicknames, calls signs, or code names",
+  ],
+};
+
+const oprWritingTips = {
+  title: "II. Writing Tips",
+  paragraphContent: " ",
+  listContent: [
+    "Did the member initiate, develop, implement, and follow through with a new plan, project, or program?",
+    "Did the member chair any meetings, committees, or subcommittees related to duty performance?",
+    "Did the individual volunteer for any projects, additional duties, community involvement, or extracurricular activities?",
+    "What recognition (awards, letters of appreciation, etc.) did the individual recieve?",
+    "How did the individual save money, time, or resources in the office?",
+    "What type of leader, both on and off duty, is the individual?",
   ],
 };
 
