@@ -180,6 +180,17 @@ const oprWritingTips = {
   ],
 };
 
+const oprVeiledPromotion = {
+  title: "III. Prohibited Promotion Statement Examples",
+  paragraphContent: " ",
+  listContent: [
+    "Lt Col X is senior officer material",
+    "Capt X has excelled in a Major's billet",
+    "Major X should be a group commander now",
+    "Capt X is ready for our toughest field grade jobs",
+  ],
+};
+
 export default function Guidelines() {
   return (
     <div>
@@ -239,6 +250,7 @@ export default function Guidelines() {
               <VStack>
                 <InfoBox content={oprFundamentals}></InfoBox>
                 <InfoBox content={oprWritingTips}></InfoBox>
+                <InfoBox content={oprVeiledPromotion}></InfoBox>
               </VStack>
             </TabPanel>
           </TabPanels>
