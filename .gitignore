@@ -16,8 +16,10 @@
 /build
 
 # misc
-.DS_Store
 *.pem
+.DS_Store
+**/@eaDir/
+**/.DS_Store
 
 # debug
 npm-debug.log*
