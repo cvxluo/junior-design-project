@@ -11,7 +11,6 @@ import {
 import { Box } from "@chakra-ui/react";
 
 import NextLink from "next/link";
-import NavBar from "../../components/NavBar/NavBar";
 
 import urls from "utils/urls";
 import { signOut } from "next-auth/react";
@@ -30,7 +29,6 @@ export default function Profile() {
   };
   return (
     <Box backgroundColor="blue">
-      <NavBar />
       <Center my="2em">
         <VStack>
           <Box h="10"></Box>

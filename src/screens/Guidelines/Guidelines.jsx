@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 
-import NavBar from "../../components/NavBar/NavBar";
 import InfoBox from "src/components/InfoBox";
 
 const infoDos = {
@@ -230,7 +229,6 @@ const oprEx = {
 export default function Guidelines() {
   return (
     <div>
-      <NavBar />
       <Box backgroundColor="blue">
         <Tabs variant="solid-rounded" size="md">
           <Center>

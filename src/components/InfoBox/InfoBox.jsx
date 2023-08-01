@@ -1,8 +1,6 @@
 import { Box, Heading, UnorderedList, Text, ListItem } from "@chakra-ui/react";
 
 const InfoBox = ({ content }) => {
-  console.log(content);
-
   const { title, paragraphContent, listContent } = content;
 
   return (
