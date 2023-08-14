@@ -6,6 +6,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { Stack, Text, VStack, HStack, Heading } from "@chakra-ui/layout";
+import Layout from "src/components/layout";
 
 export default function Home() {
   return (
@@ -79,3 +80,7 @@ export default function Home() {
     </>
   );
 }
+
+Home.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};

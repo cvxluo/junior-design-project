@@ -1,4 +1,5 @@
 import { Stack, Text } from "@chakra-ui/layout";
+import Layout from "src/components/layout";
 
 export default function NewReport() {
   return (
@@ -9,3 +10,7 @@ export default function NewReport() {
     </Stack>
   );
 }
+
+NewReport.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};

@@ -27,6 +27,18 @@ const variantFlushed = () => ({
   },
 });
 
+const loginVariant = () => ({
+  field: {
+    _focus: {
+      borderColor: "purple.300",
+      boxShadow: "0 1px 0 0 purple.300",
+    },
+    _hover: {
+      borderColor: "purple.300",
+    },
+  },
+});
+
 export const customTheme = extendTheme({
   styles: {
     global: {
@@ -53,6 +65,7 @@ export const customTheme = extendTheme({
         outline: variantOutlined,
         filled: variantFilled,
         flushed: variantFlushed,
+        login: loginVariant,
       },
     },
     Select: {

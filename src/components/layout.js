@@ -4,7 +4,6 @@ import {
   Box,
   CloseButton,
   Button,
-  ButtonGroup,
   Flex,
   VStack,
   Icon,
@@ -13,8 +12,12 @@ import {
   DrawerContent,
   Text,
   useDisclosure,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
-import { FiMenu, FiBell, FiChevronDown } from "react-icons/fi";
+import { FiMenu } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
 import {
   AiOutlineFileProtect,
@@ -25,6 +28,7 @@ import {
 } from "react-icons/ai";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
+import { signOut } from "next-auth/react";
 /*const LinkItems = [
   { name: "Home", icon: AiFillHome },
   { name: "Reports", icon: AiOutlineFolder },
@@ -87,7 +91,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
         />
       </Flex>
       <VStack mt="50px" spacing={14} alignItems="center" w="100%">
-        <NextLink href="/" passHref>
+        <NextLink href="/">
           <Button
             variant="ghost"
             onClick={onClose}
@@ -101,7 +105,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
           </Button>
         </NextLink>
 
-        <NextLink href="/reports" passHref>
+        <NextLink href={"/reports"} passHref>
           <Button
             variant="ghost"
             onClick={onClose}
@@ -115,7 +119,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
           </Button>
         </NextLink>
 
-        <NextLink href="/guidelines" passHref>
+        <NextLink href={"/guidelines"} passHref>
           <Button
             variant="ghost"
             onClick={onClose}
@@ -162,6 +166,10 @@ const SidebarContent = ({ onClose, ...rest }) => {
 
 const MobileNav = ({ onOpen, ...rest }) => {
   const router = useRouter();
+  const handleLogout = (e) => {
+    e.preventDefault();
+    signOut({ callbackUrl: "/logout" });
+  };
   return (
     <Flex
       ml={{ base: 0, md: 60 }}
@@ -182,30 +190,35 @@ const MobileNav = ({ onOpen, ...rest }) => {
       />
 
       <Box justifyContent={{ base: "space-between", md: "flex-end" }}>
-        <ButtonGroup variant="ghost">
-          <Button
-            onClick={() => router.push("/newreport")}
-            fontSize={20}
-            textColor={"white"}
-            colorScheme="purple"
-            _hover={{ bg: "white", color: "black" }}
-            textOverflow={"inherit"}
-            leftIcon={<AiOutlineFileAdd />}
-          >
-            New Report
-          </Button>
-        </ButtonGroup>
-        <ButtonGroup variant="ghost">
-          <Button
-            onClick={() => router.push("/profile")}
+        <Button
+          variant="ghost"
+          onClick={() => router.push("/newreport")}
+          fontSize={20}
+          textColor={"white"}
+          colorScheme="purple"
+          _hover={{ bg: "white", color: "black" }}
+          textOverflow={"inherit"}
+          leftIcon={<AiOutlineFileAdd />}
+        >
+          New Report
+        </Button>
+
+        <Menu>
+          <MenuButton
+            as={Button}
+            variant="ghost"
             fontSize={20}
             textColor={"white"}
             _hover={{ bg: "white", color: "black" }}
             leftIcon={<FaUser />}
           >
             <Text display={{ base: "none", md: "flex" }}>Rank Lastname</Text>
-          </Button>
-        </ButtonGroup>
+          </MenuButton>
+          <MenuList>
+            <MenuItem onClick={() => router.push("/profile")}>Profile</MenuItem>
+            <MenuItem onClick={handleLogout}>Logout</MenuItem>
+          </MenuList>
+        </Menu>
       </Box>
     </Flex>
   );

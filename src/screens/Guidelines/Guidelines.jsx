@@ -8,6 +8,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
+import Layout from "src/components/layout";
 
 import InfoBox from "src/components/InfoBox";
 
@@ -299,3 +300,7 @@ export default function Guidelines() {
     </div>
   );
 }
+
+Guidelines.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};
