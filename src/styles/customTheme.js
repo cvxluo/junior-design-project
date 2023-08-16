@@ -2,9 +2,10 @@ import { extendTheme } from "@chakra-ui/react";
 
 const variantOutlined = () => ({
   field: {
+    borderColor: "purple.300",
     _focus: {
       borderColor: "var(--chakra-ui-focus-ring-color)",
-      boxShadow: "0 0 0 2px var(--chakra-ui-focus-ring-color)",
+      boxShadow: "0 0 0 1px purple",
     },
   },
 });
@@ -36,7 +37,7 @@ export const customTheme = extendTheme({
       // button, checkbox, radio, switch.
       // html: {
       ":host,:root": {
-        "--chakra-ui-focus-ring-color": "white",
+        "--chakra-ui-focus-ring-color": "blackAlpha.300",
       },
     },
   },
@@ -48,6 +49,13 @@ export const customTheme = extendTheme({
     outline: "0 0 0 3px var(--chakra-ui-focus-ring-color)",
   },
   components: {
+    Accordian: {
+      variants: {
+        outline: variantOutlined,
+        filled: variantFilled,
+        flushed: variantFlushed,
+      },
+    },
     Input: {
       variants: {
         outline: variantOutlined,
