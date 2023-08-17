@@ -23,6 +23,11 @@ import { updateReport, getReport } from "src/actions/Report";
 import { getSession } from "next-auth/react";
 
 export default function ViewReport() {
+
+  useEffect(() => {
+      getSession().then((session) => setEmail(session.user.email));
+    }, []);
+
   const [mode, setMode] = useState("View");
   const [data, setData] = useState("");
   const [reportId, setReportId] = useState("");
@@ -40,9 +45,7 @@ export default function ViewReport() {
 
   const [email, setEmail] = useState("");
 
-  useEffect(() => {
-    getSession().then((session) => setEmail(session.user.email));
-  }, []);
+  
 
   const handleSubmitInfo = (e) => {
     e.preventDefault();
