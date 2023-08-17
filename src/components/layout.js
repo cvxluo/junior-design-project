@@ -6,6 +6,7 @@ import {
   Button,
   Flex,
   VStack,
+  Heading,
   Icon,
   useColorModeValue,
   Drawer,
@@ -38,7 +39,7 @@ import { signOut } from "next-auth/react";
 export default function SidebarWithHeader({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")}>
+    <Box minH="100vh" bg={useColorModeValue("#F5F5F5", "#D4D4D4")}>
       <SidebarContent
         onClose={() => onClose}
         display={{ base: "none", md: "block" }}
@@ -70,7 +71,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
   return (
     <Box
       transition="3s ease"
-      bg={"purple.500"}
+      bg={"#F4E8C1"}
       w={{ base: "full", md: 60 }}
       pos="fixed"
       h="full"
@@ -80,25 +81,25 @@ const SidebarContent = ({ onClose, ...rest }) => {
         <Icon
           my={"18"}
           as={AiOutlineFileProtect}
-          color="white"
+          color="#331E38"
           boxSize={"14"}
         />
         <CloseButton
           alignSelf="center"
           display={{ md: "none" }}
-          color="white"
+          color="black"
           onClick={onClose}
         />
       </Flex>
-      <VStack mt="50px" spacing={14} alignItems="center" w="100%">
+      <VStack mt="50px" ml={10} spacing={14} alignItems="left" w="100%">
         <NextLink href="/">
           <Button
             variant="ghost"
             onClick={onClose}
             fontSize={20}
-            textColor={"white"}
+            textColor={"#331E38"}
             colorScheme="purple"
-            _hover={{ bg: "black", color: "white" }}
+            _hover={{ bg: "#706993", color: "white" }}
             leftIcon={<AiFillHome />}
           >
             Home
@@ -110,9 +111,9 @@ const SidebarContent = ({ onClose, ...rest }) => {
             variant="ghost"
             onClick={onClose}
             fontSize={20}
-            textColor={"white"}
+            textColor={"#331E38"}
             colorScheme="purple"
-            _hover={{ bg: "black", color: "white" }}
+            _hover={{ bg: "#706993", color: "white" }}
             leftIcon={<AiOutlineFolder />}
           >
             Reports
@@ -124,9 +125,9 @@ const SidebarContent = ({ onClose, ...rest }) => {
             variant="ghost"
             onClick={onClose}
             fontSize={20}
-            textColor={"white"}
+            textColor={"#331E38"}
             colorScheme="purple"
-            _hover={{ bg: "black", color: "white" }}
+            _hover={{ bg: "#706993", color: "white" }}
             leftIcon={<AiOutlineFile />}
           >
             Guidelines
@@ -176,27 +177,27 @@ const MobileNav = ({ onOpen, ...rest }) => {
       px={{ base: 4, md: 4 }}
       height="20"
       alignItems="center"
-      bg={"purple.900"}
-      justifyContent={{ base: "space-between", md: "flex-end" }}
+      bg={"white"}
+      justifyContent={{ base: "space-between" }}
       {...rest}
     >
+      <Heading textColor={"#706993"}>Dashboard</Heading>
       <IconButton
         display={{ base: "flex", md: "none" }}
         onClick={onOpen}
         variant="outline"
         aria-label="open menu"
-        color={"white"}
+        color={"#706993"}
         icon={<FiMenu />}
       />
-
       <Box justifyContent={{ base: "space-between", md: "flex-end" }}>
         <Button
           variant="ghost"
           onClick={() => router.push("/newreport")}
           fontSize={20}
-          textColor={"white"}
+          textColor={"#706993"}
           colorScheme="purple"
-          _hover={{ bg: "white", color: "black" }}
+          _hover={{ bg: "#706993", color: "white" }}
           textOverflow={"inherit"}
           leftIcon={<AiOutlineFileAdd />}
         >
@@ -208,15 +209,15 @@ const MobileNav = ({ onOpen, ...rest }) => {
             as={Button}
             variant="ghost"
             fontSize={20}
-            textColor={"white"}
-            _hover={{ bg: "white", color: "black" }}
+            textColor={"#706993"}
+            _hover={{ bg: "#706993", color: "white" }}
             leftIcon={<FaUser />}
           >
             <Text display={{ base: "none", md: "flex" }}>Rank Lastname</Text>
           </MenuButton>
           <MenuList>
-            <MenuItem onClick={() => router.push("/profile")}>Profile</MenuItem>
-            <MenuItem onClick={handleLogout}>Logout</MenuItem>
+            <MenuItem textColor={"#331E38"} onClick={() => router.push("/profile")}>Profile</MenuItem>
+            <MenuItem textColor={"#331E38"} onClick={handleLogout}>Logout</MenuItem>
           </MenuList>
         </Menu>
       </Box>

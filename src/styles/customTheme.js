@@ -34,7 +34,7 @@ const loginVariant = () => ({
       boxShadow: "0 1px 0 0 purple.300",
     },
     _hover: {
-      borderColor: "purple.300",
+      borderColor: "purple.800",
     },
   },
 });

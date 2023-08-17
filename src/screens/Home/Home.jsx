@@ -12,52 +12,52 @@ export default function Home() {
   return (
     <>
       <Stack>
-        <Heading fontSize={{ base: "25px", md: "30px" }} color="black" py={"5"}>
+        <Heading fontSize={{ base: "25px", md: "30px" }} color="#331E38" py={"5"}>
           Welcome, Rank Lastname!
         </Heading>
 
-        <Text fontSize={20} color="black" py={"2"}>
+        <Text fontSize={20} color="#331E38" py={"2"}>
           You have written...
         </Text>
         <HStack spacing={4}>
           <Card
-            bgColor={"blackAlpha.300"}
+            bgColor={"#A0C1B9"}
             size={{ base: "sm", md: "lg" }}
             variant={"outline"}
             align={"center"}
           >
             <CardBody>
               <VStack>
-                <Text color={"black"} fontSize={30} fontWeight={"semibold"}>
+                <Text color={"#331E38"} fontSize={30} fontWeight={"semibold"}>
                   #
                 </Text>
-                <Text color={"black"}>reports for Q#</Text>
+                <Text color={"#331E38"}>reports for Q#</Text>
               </VStack>
             </CardBody>
           </Card>
           <Card
-            bgColor={"blackAlpha.300"}
+            bgColor={"#70A0AF"}
             size={{ base: "sm", md: "lg" }}
             variant={"outline"}
             align={"center"}
           >
             <CardBody>
               <VStack>
-                <Text color={"black"} fontSize={30} fontWeight={"semibold"}>
+                <Text color={"#331E38"} fontSize={30} fontWeight={"semibold"}>
                   #
                 </Text>
-                <Text color={"black"}>reports for 2023</Text>
+                <Text color={"#331E38"}>reports for 2023</Text>
               </VStack>
             </CardBody>
           </Card>
         </HStack>
 
-        <Text fontSize={20} color="black" pt={"8"} pe={"5"}>
+        <Text fontSize={20} color="#331E38" pt={"8"} pe={"5"}>
           Your last report was written # days ago.
         </Text>
         <Card
-          bgColor={"purple.300"}
-          size={{ base: "sm", md: "sm" }}
+          bgColor={"#706993"}
+          size={{ base: "sm", md: "lg" }}
           variant={"outline"}
           align={"left"}
           width={{ md: "md" }}
@@ -66,12 +66,12 @@ export default function Home() {
             <Heading fontSize={"20"}>2023 Q# July 1</Heading>
           </CardHeader>
           <CardBody pt={"0"} pb={"5"}>
-            <Text color={"black"} fontSize={"15"} fontWeight={"semibold"}>
+            <Text color={"#331E38"} fontSize={"15"} fontWeight={"semibold"}>
               Preview
             </Text>
           </CardBody>
           <CardFooter pt={"0"}>
-            <Button bg="white" _hover={{ bg: "black", color: "white" }}>
+            <Button bg="white" _hover={{ bg: "#331E38", color: "white" }}>
               View Last Report
             </Button>
           </CardFooter>
