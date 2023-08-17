@@ -17,7 +17,6 @@ import {
   FormLabel,
   Select,
   Textarea,
-  useDisclosure,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -31,6 +30,7 @@ import urls from "utils/urls";
 import { createReport } from "src/actions/Report";
 import { useEffect } from "react";
 import { getSession } from "next-auth/react";
+import Layout from "src/components/layoutLogin";
 
 export default function NewReport() {
   const [mode, setMode] = useState("Create New Report");
@@ -152,7 +152,30 @@ export default function NewReport() {
             </PopoverFooter>
           </PopoverContent>
         </Popover>
+        <Popover placement="right" closeOnBlur={false}>
+          <PopoverTrigger>
+            <Button>Cancel</Button>
+          </PopoverTrigger>
+          <PopoverContent>
+            <PopoverHeader fontWeight="semibold">Confirmation</PopoverHeader>
+            <PopoverArrow />
+            <PopoverCloseButton />
+            <PopoverBody>
+              Are you sure you want to cancel? Any work done will be lost.
+            </PopoverBody>
+            <PopoverFooter display="flex" justifyContent="flex-end">
+              <ButtonGroup size="sm">
+                <Button variant="outline">No</Button>
+                <Button colorScheme="green">Yes</Button>
+              </ButtonGroup>
+            </PopoverFooter>
+          </PopoverContent>
+        </Popover>
       </VStack>
     </Box>
   );
 }
+
+NewReport.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};
