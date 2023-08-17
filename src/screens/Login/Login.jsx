@@ -102,12 +102,17 @@ export default function Login() {
         {mode === "Register" && (
           <div>
             <FormControl id="reportType" isRequired>
-              <FormLabel>Report Type</FormLabel>
+              <FormLabel fontSize={15} color={"white"}>Report Type</FormLabel>
               <Select
                 placeholder="Select Report Type"
                 value={reportType}
                 defaultValue={0}
-                mb="5"
+                variant="login"
+                borderWidth={"medium"}
+                borderColor={"black"}
+                bg="white"
+                mb={2}
+                size={"md"}
                 onChange={(e) => setReportType(e.target.value)}
               >
                 <option value={1}>EPR</option>
@@ -115,13 +120,18 @@ export default function Login() {
                 <FormErrorMessage>Report Type is required.</FormErrorMessage>
               </Select>
             </FormControl>
-            <FormControl id="rank">
-              <FormLabel>Rank</FormLabel>
+            <FormControl id="rank" isRequired>
+              <FormLabel fontSize={15} color={"white"}>Rank</FormLabel>
               <Select
                 placeholder="Select Rank"
                 value={rank}
                 defaultValue={0}
-                mb="5"
+                variant="login"
+                borderWidth={"medium"}
+                borderColor={"black"}
+                bg="white"
+                mb={2}
+                size={"md"}
                 onChange={(e) => setRank(e.target.value)}
               >
                 <option value={"AB"}>Airman Basic (AB)</option>
@@ -154,54 +164,79 @@ export default function Login() {
               </Select>
             </FormControl>
             <FormControl id="firstName" isRequired>
-              <FormLabel>First Name</FormLabel>
+              <FormLabel fontSize={15} color={"white"}>First Name</FormLabel>
               <Input
                 type=""
                 value={firstName}
                 maxLength={64}
-                mb="5"
+                variant="login"
+                borderWidth={"medium"}
+                borderColor={"black"}
+                bg="white"
+                mb={2}
+                size={"md"}
                 onChange={(e) => setFirstName(e.target.value)}
               />
               <FormErrorMessage>First Name is required.</FormErrorMessage>
             </FormControl>
             <FormControl id="lastName" isRequired>
-              <FormLabel>Last Name</FormLabel>
+              <FormLabel fontSize={15} color={"white"}>Last Name</FormLabel>
               <Input
                 type=""
                 value={lastName}
                 maxLength={64}
-                mb="5"
+                variant="login"
+                borderWidth={"medium"}
+                borderColor={"black"}
+                bg="white"
+                mb={2}
+                size={"md"}
                 onChange={(e) => setLastName(e.target.value)}
               />
               <FormErrorMessage>Last Name is required.</FormErrorMessage>
             </FormControl>
             <FormControl id="suffix">
-              <FormLabel>Suffix</FormLabel>
+              <FormLabel fontSize={15} color={"white"}>Suffix</FormLabel>
               <Input
                 type=""
                 value={suffix}
                 maxLength={6}
-                mb="5"
+                variant="login"
+                borderWidth={"medium"}
+                borderColor={"black"}
+                bg="white"
+                mb={2}
+                size={"md"}
                 onChange={(e) => setSuffix(e.target.value)}
               />
             </FormControl>
             <FormControl id="email" isRequired>
-              <FormLabel>Email</FormLabel>
+              <FormLabel fontSize={15} color={"white"}>Email</FormLabel>
               <Input
                 type="email"
                 value={email}
-                mb="5"
+                variant="login"
+                borderWidth={"medium"}
+                borderColor={"black"}
+                bg="white"
+                mb={2}
+                size={"md"}
                 maxLength={255}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <FormErrorMessage>Email is required.</FormErrorMessage>
             </FormControl>
             <FormControl id="password" isRequired>
-              <FormLabel>Password</FormLabel>
+              <FormLabel fontSize={15} color={"white"}>Password</FormLabel>
               <Input
                 type="password"
                 value={password}
-                mb="5"
+                variant="login"
+                borderWidth={"medium"}
+                borderColor={"black"}
+                bg="white"
+                mb={2}
+                size={"md"}
                 minLength={8}
                 maxLength={32}
                 onChange={(e) => setPassword(e.target.value)}
@@ -209,11 +244,16 @@ export default function Login() {
               <FormErrorMessage>Password is required.</FormErrorMessage>
             </FormControl>
             <FormControl id="confirmPassword" isRequired>
-              <FormLabel>Confirm Password</FormLabel>
+              <FormLabel fontSize={15} color={"white"}>Confirm Password</FormLabel>
               <Input
                 type="password"
                 value={password2}
-                mb="5"
+                variant="login"
+                borderWidth={"medium"}
+                borderColor={"black"}
+                bg="white"
+                mb={2}
+                size={"md"}
                 minLength={8}
                 maxLength={32}
                 onChange={(e) => setPassword2(e.target.value)}
