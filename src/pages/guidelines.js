@@ -1,3 +1,3 @@
-import Guidelines from "../screens/Guidelines";
+import Guidelines from "../app/Guidelines/page";
 
 export default Guidelines;

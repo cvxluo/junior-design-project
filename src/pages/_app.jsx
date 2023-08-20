@@ -1,6 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { SessionProvider } from "next-auth/react";
-import { customTheme } from "../styles/customTheme";
+import { customTheme } from "../app/styles/customTheme";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const renderWithLayout = Component.getLayout || ((page) => page);

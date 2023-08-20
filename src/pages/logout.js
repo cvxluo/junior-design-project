@@ -1,3 +1,3 @@
-import Logout from "../screens/Logout";
+import Logout from "../app/Logout/page";
 
 export default Logout;
