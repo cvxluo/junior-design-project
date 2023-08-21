@@ -6,7 +6,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { Stack, Text, VStack, HStack, Heading } from "@chakra-ui/layout";
-import Layout from "src/components/layoutMain";
+import Layout from "src/app/Index/layout";
 
 export default function Page() {
   return (

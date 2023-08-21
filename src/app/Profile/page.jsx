@@ -8,7 +8,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
-import Layout from "src/components/layoutMain";
+import Layout from "src/app/Index/layout";
 import urls from "utils/urls";
 import { signOut } from "next-auth/react";
 import { useEffect } from "react";

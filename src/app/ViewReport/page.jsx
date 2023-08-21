@@ -19,7 +19,7 @@ import {
 import urls from "utils/urls";
 import { updateReport, getReport } from "src/actions/Report";
 import { getSession } from "next-auth/react";
-import Layout from "src/components/layoutMain";
+import Layout from "src/app/Index/layout";
 import Report from "../NewReport/report";
 import ReportPreview from "./reportPreview";
 

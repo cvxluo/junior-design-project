@@ -12,7 +12,7 @@ import urls from "utils/urls";
 import { createReport } from "src/actions/Report";
 import { useEffect } from "react";
 import { getSession } from "next-auth/react";
-import Layout from "src/components/layoutMain";
+import Layout from "src/app/Index/layout";
 import Report from "./report";
 
 export default function Page() {

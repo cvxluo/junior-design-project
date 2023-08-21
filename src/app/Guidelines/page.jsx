@@ -8,9 +8,9 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
-import Layout from "src/components/layoutMain";
+import Layout from "src/app/Index/layout";
 
-import InfoBox from "src/components/InfoBox";
+import InfoBox from "./InfoBox";
 
 const infoDos = {
   title: "II. Do:",

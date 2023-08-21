@@ -1,5 +1,5 @@
 import { VStack, Box, Button } from "@chakra-ui/react";
-import Layout from "src/components/layoutMain";
+import Layout from "src/app/Index/layout";
 import ReportList from "./ReportList";
 import { useRouter } from "next/router";
 

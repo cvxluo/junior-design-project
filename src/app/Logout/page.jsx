@@ -1,7 +1,7 @@
 import { Stack, Text } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import Layout from "src/components/layoutLogin";
+import Layout from "src/app/Login/layout";
 
 export default function Page() {
   const router = useRouter();

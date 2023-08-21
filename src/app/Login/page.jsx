@@ -18,7 +18,7 @@ import {
 
 import { signIn } from "next-auth/react";
 import { signUp } from "src/actions/User";
-import Layout from "src/components/layoutLogin";
+import Layout from "src/app/Login/layout";
 
 export default function Page() {
   const [mode, setMode] = useState("Login");
@@ -29,6 +29,7 @@ export default function Page() {
   const [suffix, setSuffix] = useState("");
   const [reportType, setReportType] = useState(0);
   const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
 
   const handleSubmitInfo = (e) => {
     e.preventDefault();
