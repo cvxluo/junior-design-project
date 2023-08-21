@@ -1,39 +1,49 @@
 /* eslint-disable no-unused-vars */
-import { useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Box,
-  VStack,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogOverlay,
+  Card,
   HStack,
   Heading,
   Input,
   Button,
   ButtonGroup,
-  FormControl,
-  FormLabel,
-  Select,
-  Textarea,
+  useDisclosure,
+  VStack,
 } from "@chakra-ui/react";
 import urls from "utils/urls";
 import { updateReport, getReport } from "src/actions/Report";
 import { getSession } from "next-auth/react";
+import Layout from "src/components/layoutMain";
+import Report from "../NewReport/report";
+import ReportPreview from "./reportPreview";
 
 export default function Page() {
-
   useEffect(() => {
-      getSession().then((session) => setEmail(session.user.email));
-    }, []);
+    getSession().then((session) => setEmail(session.user.email));
+  }, []);
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [mode, setMode] = useState("View");
   const [data, setData] = useState("");
   const [reportId, setReportId] = useState("");
 
-  /* must get report id somehow*/
+  //temporary for viewing purposes
+  const [title, setTitle] = useState("");
+  const [quarter, setQuarter] = useState("");
+  const [date_of_creation, setDate] = useState("");
+  const [report, setReport] = useState("");
 
+  const [email, setEmail] = useState("");
+
+  /* must get report id somehow*/
+  /*
   if (mode === "View") {
     setData(getReport(reportId));
   }
@@ -45,7 +55,7 @@ export default function Page() {
 
   const [email, setEmail] = useState("");
 
-  
+    */
 
   const handleSubmitInfo = (e) => {
     e.preventDefault();
@@ -59,92 +69,89 @@ export default function Page() {
   };
 
   return (
-    <Box>
-      <VStack m="10vh">
-        <Heading>{mode}</Heading>
-        <br />
-        <div className="flex">
-          <FormControl id="title" isRequired>
-            <FormLabel>Title</FormLabel>
-            <Input
-              type=""
-              value={title}
-              maxLength={64}
-              mb="3"
-              onChange={(e) => setTitle(e.target.value)}
-            />
-          </FormControl>
-          <HStack mb="3">
-            <FormControl id="quarter" isRequired>
-              <FormLabel>Quarter</FormLabel>
-              <Select
-                placeholder="1st Quarter"
-                value={quarter}
-                defaultValue={1}
-                width={200}
-                mr={15}
-                onChange={(e) => setQuarter(e.target.value)}
+    <>
+      <Card
+        p={2}
+        alignSelf={"center"}
+        size={{ base: "sm", md: "md" }}
+        w={{ md: "lg" }}
+        bgColor={"white"}
+      >
+        <VStack m="10vh">
+          <Heading color="#331E38">{mode}</Heading>
+          <br />
+          {mode === "View" && (
+            <>
+              <ReportPreview />
+              <Button
+                bgColor={"#70A0AF"}
+                color={"white"}
+                _hover={{ bgColor: "#706993", color: "white" }}
+                onClick={() => setMode("Edit")}
               >
-                <option value={2}>2nd Quarter</option>
-                <option value={3}>3rd Quarter</option>
-                <option value={4}>4th Quarter</option>
-              </Select>
-            </FormControl>
-            <FormControl id="date" isRequired>
-              <FormLabel>Date</FormLabel>
-              <Input
-                type="date"
-                value={date_of_creation}
-                width={200}
-                onChange={(e) => setDate(e.target.value)}
-              />
-            </FormControl>
-          </HStack>
-          <br />
-          <Accordion allowToggle>
-            <AccordionItem borderColor="purple.300">
-              <h2>
-                <AccordionButton>
-                  <Box as="span" flex="1" textAlign="left">
-                    Guidelines
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>
-                <div>Here are some quick tips for effective bullet points:</div>
-                <div>Tip 1: This is a tip</div>
-                <div>Tip 2: This is another time</div>
-                <div>Tip 3: Still another tip</div>
-              </AccordionPanel>
-            </AccordionItem>
-          </Accordion>
-          <br />
-          <VStack>
-            <FormControl id="report" isRequired>
-              <Textarea
-                placeholder="What would you like to report?"
-                type="text"
-                varient="outline"
-                maxLength={500}
-                value={report}
-                onChange={(e) => setReport(e.target.value)}
-              />
-            </FormControl>
-          </VStack>
-        </div>
-        <ButtonGroup>
-          <Button onClick={(e) => handleSubmitInfo(e)}>Submit</Button>
-          <Button
-            onClick={() => {
-              setMode("View");
-            }}
-          >
-            Cancel
-          </Button>
-        </ButtonGroup>
-      </VStack>
-    </Box>
+                Edit
+              </Button>
+            </>
+          )}
+          {mode === "Edit" && (
+            <>
+              <Report />
+              <ButtonGroup>
+                <Button
+                  bgColor={"#F4E8C1"}
+                  color={"black"}
+                  _hover={{ bgColor: "red", color: "white" }}
+                  onClick={onOpen}
+                >
+                  Delete
+                </Button>
+                <AlertDialog
+                  isOpen={isOpen}
+                  onClose={onClose}
+                >
+                  <AlertDialogOverlay>
+                    <AlertDialogContent>
+                      <AlertDialogHeader fontSize="lg" fontWeight="bold">
+                        Delete Report
+                      </AlertDialogHeader>
+
+                      <AlertDialogBody>
+                        Are you sure? You can't undo this action afterwards.
+                      </AlertDialogBody>
+
+                      <AlertDialogFooter>
+                        <Button onClick={onClose}>
+                          Cancel
+                        </Button>
+                        <Button colorScheme="red" onClick={onClose} ml={3}>
+                          Delete
+                        </Button>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialogOverlay>
+                </AlertDialog>
+                <Button
+                  bgColor={"#A0C1B9"}
+                  color={"#331E38"}
+                  _hover={{ bgColor: "#706993", color: "white" }}
+                  onClick={() => setMode("View")} // This needs to be updated to reload the view with the report id
+                >
+                  Cancel
+                </Button>
+                <Button
+                  bgColor={"#70A0AF"}
+                  color={"white"}
+                  _hover={{ bgColor: "#706993", color: "white" }}
+                  onClick={(e) => handleSubmitInfo(e)}
+                >
+                  Update
+                </Button>
+              </ButtonGroup>
+            </>
+          )}
+        </VStack>
+      </Card>
+    </>
   );
 }
 
