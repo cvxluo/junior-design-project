@@ -116,6 +116,7 @@ export default function Report() {
             bg="#ECECEC"
             mb={3}
             size={"md"}
+            width={{ base: "100%", md: "lg" }}
             value={report}
             onChange={(e) => setReport(e.target.value)}
           />

@@ -41,11 +41,11 @@ export default function Page() {
       <Card
         p={2}
         alignSelf={"center"}
-        size={{ base: "sm", md: "md" }}
-        w={{ md: "lg" }}
+        size={{ base: "sm", md: "lg" }}
+        w={'{ md: "lg" }'}
         bgColor={"white"}
       >
-        <VStack m="10vh">
+        <VStack m="5vh">
           <Heading color="#331E38">{mode}</Heading>
           <br />
           <Report />

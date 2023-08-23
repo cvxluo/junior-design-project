@@ -113,7 +113,7 @@ export default function ReportPreview() {
             bg="#ECECEC"
             mb={3}
             size={"md"}
-            value={report}
+            width={{ base: "100%", md: "lg" }}
             onChange={(e) => setReport(e.target.value)}
           />
         </FormControl>
