@@ -1,19 +1,28 @@
-import { VStack, Box, Button } from "@chakra-ui/react";
-import Layout from "src/app/Index/layout";
+import { VStack, Box, Button, Card } from "@chakra-ui/react";
 import ReportList from "./ReportList";
 import { useRouter } from "next/router";
+import Layout from "../Index/layout";
 
 export default function Page(props) {
   const { reports } = props;
   const router = useRouter();
+  
   return (
-    <Box>
-      <VStack>
-        <Box h="10"> </Box>
-        <ReportList reports={reports} />
-        <Button onClick={() => router.push("/")}>Home</Button>
-      </VStack>
-    </Box>
+    <>
+      <Card
+        p={2}
+        alignSelf={"center"}
+        size={{ base: "sm", md: "md" }}
+        w={{ md: "lg" }}
+        bgColor={"white"}
+      >
+        <VStack>
+          <Box h="10"> </Box>
+          <ReportList reports={reports} />
+          <Button onClick={() => router.push("/")}>Home</Button>
+        </VStack>
+      </Card>
+    </>
   );
 }
 

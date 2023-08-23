@@ -18,7 +18,7 @@ import {
 
 import { signIn } from "next-auth/react";
 import { signUp } from "src/actions/User";
-import Layout from "src/app/Login/layout";
+import Layout from "../Login/layout";
 
 export default function Page() {
   const [mode, setMode] = useState("Login");

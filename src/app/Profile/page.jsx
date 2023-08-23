@@ -54,10 +54,10 @@ export default function Page() {
               <Button isDisabled>Delete Account</Button>
 
               <Button
-                variant={"solid"}
-                bgColor={"purple.600"}
+                mb={'5'}
+                bgColor={"#70A0AF"}
                 color={"white"}
-                _hover={{ bgColor: "black", color: "white" }}
+                _hover={{ bgColor: "#706993", color: "white" }}
                 onClick={handleLogout}
               >
                 Logout

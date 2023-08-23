@@ -1,26 +1,33 @@
-import { Stack, Text } from "@chakra-ui/layout";
+import { Heading, Link, Card } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
-import { useRouter } from "next/router";
-import Layout from "src/app/Login/layout";
+import Layout from "../Login/layout";
 
 export default function Page() {
-  const router = useRouter();
+
   return (
-    <Stack align={"center"}>
-      <Text fontSize={40} color="black" pl={"10"}>
-        You have been succesfully logged out
-      </Text>
-      <Button
-        m={8}
-        colorScheme="purple"
-        variant={"outline"}
-        _hover={{ bgColor: "black", color: "white" }}
-        size={"lg"}
-        onClick={() => router.push("/")}
+    <>
+      <Card
+        p={2}
+        alignSelf={"center"}
+        size={{ base: "sm", md: "md" }}
+        w={{ md: "lg" }}
+        bgColor={"white"}
       >
-        Return to Login
-      </Button>
-    </Stack>
+          <Heading mt={'5'} mb={'5'}>
+            Logout successful.
+          </Heading>
+          <Link href="/">
+            <Button
+              mb={'5'}
+              bgColor={"#70A0AF"}
+              color={"white"}
+              _hover={{ bgColor: "#706993", color: "white" }}
+            >
+              Login
+            </Button>
+          </Link>
+      </Card>
+    </>
   );
 }
 

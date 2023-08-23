@@ -11,6 +11,14 @@ import Layout from "src/app/Index/layout";
 export default function Page() {
   return (
     <>
+    <Card
+        p={5}
+        alignSelf={"center"}
+        alignItems={"center"}
+        size={{ base: "sm", md: "md" }}
+        w={{ md: "lg" }}
+        bgColor={"white"}
+      >
       <Stack>
         <Heading fontSize={{ base: "25px", md: "30px" }} color="#331E38" py={"5"}>
           Welcome, Rank Lastname!
@@ -19,7 +27,7 @@ export default function Page() {
         <Text fontSize={20} color="#331E38" py={"2"}>
           You have written...
         </Text>
-        <HStack spacing={4}>
+        <HStack spacing={4} alignSelf={"center"}>
           <Card
             bgColor={"#A0C1B9"}
             size={{ base: "sm", md: "lg" }}
@@ -52,7 +60,7 @@ export default function Page() {
           </Card>
         </HStack>
 
-        <Text fontSize={20} color="#331E38" pt={"8"} pe={"5"}>
+        <Text fontSize={20} color="#331E38" pt={"8"} pe={"5"} alignSelf={"center"}>
           Your last report was written # days ago.
         </Text>
         <Card
@@ -77,6 +85,7 @@ export default function Page() {
           </CardFooter>
         </Card>
       </Stack>
+      </Card>
     </>
   );
 }

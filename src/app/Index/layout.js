@@ -59,9 +59,9 @@ export default function SidebarWithHeader({ children }) {
       </Drawer>
       {/* mobilenav */}
       <MobileNav onOpen={onOpen} />
-      <Box ml={{ base: 0, md: 60 }} p="4" px="8">
+      <Flex align="center" justify="center" p="4" px="8" ml={{base: '0', md: '60'}}>
         {children}
-      </Box>
+      </Flex>
     </Box>
   );
 }
@@ -216,8 +216,15 @@ const MobileNav = ({ onOpen, ...rest }) => {
             <Text display={{ base: "none", md: "flex" }}>Rank Lastname</Text>
           </MenuButton>
           <MenuList>
-            <MenuItem textColor={"#331E38"} onClick={() => router.push("/profile")}>Profile</MenuItem>
-            <MenuItem textColor={"#331E38"} onClick={handleLogout}>Logout</MenuItem>
+            <MenuItem
+              textColor={"#331E38"}
+              onClick={() => router.push("/profile")}
+            >
+              Profile
+            </MenuItem>
+            <MenuItem textColor={"#331E38"} onClick={handleLogout}>
+              Logout
+            </MenuItem>
           </MenuList>
         </Menu>
       </Box>
