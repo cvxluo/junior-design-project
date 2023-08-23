@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import { Stack, Flex, Icon, Box, Text } from "@chakra-ui/react";
+import { Stack, Icon, Box } from "@chakra-ui/react";
 import { AiOutlineFileProtect } from "react-icons/ai";
 
 export default function layoutLogin({ children }) {

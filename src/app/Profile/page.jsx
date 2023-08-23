@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import {
   VStack,
@@ -9,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import Layout from "src/app/Index/layout";
-import urls from "utils/urls";
 import { signOut } from "next-auth/react";
 import { useEffect } from "react";
 import { getSession } from "next-auth/react";
@@ -54,7 +54,7 @@ export default function Page() {
               <Button isDisabled>Delete Account</Button>
 
               <Button
-                mb={'5'}
+                mb={"5"}
                 bgColor={"#70A0AF"}
                 color={"white"}
                 _hover={{ bgColor: "#706993", color: "white" }}

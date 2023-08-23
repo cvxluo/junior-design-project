@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   IconButton,
@@ -27,7 +28,7 @@ import {
   AiOutlineFolder,
   AiOutlineFileAdd,
 } from "react-icons/ai";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import NextLink from "next/link";
 import { signOut } from "next-auth/react";
 /*const LinkItems = [
@@ -59,7 +60,13 @@ export default function SidebarWithHeader({ children }) {
       </Drawer>
       {/* mobilenav */}
       <MobileNav onOpen={onOpen} />
-      <Flex align="center" justify="center" p="4" px="8" ml={{base: '0', md: '60'}}>
+      <Flex
+        align="center"
+        justify="center"
+        p="4"
+        px="8"
+        ml={{ base: "0", md: "60" }}
+      >
         {children}
       </Flex>
     </Box>
@@ -67,7 +74,7 @@ export default function SidebarWithHeader({ children }) {
 }
 
 const SidebarContent = ({ onClose, ...rest }) => {
-  const router = useRouter();
+  //const router = useRouter();
   return (
     <Box
       transition="3s ease"

@@ -1,12 +1,13 @@
+"use client";
 import { VStack, Box, Button, Card } from "@chakra-ui/react";
 import ReportList from "./ReportList";
-import { useRouter } from "next/router";
-import Layout from "../Index/layout";
+import { useRouter } from "next/navigation";
+import Layout from "src/app/Index/layout";
 
 export default function Page(props) {
   const { reports } = props;
   const router = useRouter();
-  
+
   return (
     <>
       <Card

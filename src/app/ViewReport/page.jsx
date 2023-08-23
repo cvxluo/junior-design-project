@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable no-unused-vars */
 import { React, useState, useEffect } from "react";
 import {
@@ -104,24 +105,15 @@ export default function Page() {
                 >
                   Delete
                 </Button>
-                <AlertDialog
-                  isOpen={isOpen}
-                  onClose={onClose}
-                >
+                <AlertDialog isOpen={isOpen} onClose={onClose}>
                   <AlertDialogOverlay>
                     <AlertDialogContent>
                       <AlertDialogHeader fontSize="lg" fontWeight="bold">
                         Delete Report
                       </AlertDialogHeader>
-
-                      <AlertDialogBody>
-                        Are you sure? You can't undo this action afterwards.
-                      </AlertDialogBody>
-
+                      <AlertDialogBody>Are you sure?</AlertDialogBody>
                       <AlertDialogFooter>
-                        <Button onClick={onClose}>
-                          Cancel
-                        </Button>
+                        <Button onClick={onClose}>Cancel</Button>
                         <Button colorScheme="red" onClick={onClose} ml={3}>
                           Delete
                         </Button>

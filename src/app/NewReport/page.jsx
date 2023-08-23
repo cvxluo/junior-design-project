@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import {
@@ -50,24 +51,24 @@ export default function Page() {
           <br />
           <Report />
           <ButtonGroup>
-          <Link href="/">
+            <Link href="/">
+              <Button
+                bgColor={"#A0C1B9"}
+                color={"#331E38"}
+                _hover={{ bgColor: "#706993", color: "white" }}
+              >
+                Cancel
+              </Button>
+            </Link>
             <Button
-              bgColor={"#A0C1B9"}
-              color={"#331E38"}
+              bgColor={"#70A0AF"}
+              color={"white"}
               _hover={{ bgColor: "#706993", color: "white" }}
+              onClick={(e) => handleSubmitInfo(e)}
             >
-              Cancel
+              Submit
             </Button>
-          </Link>
-          <Button
-            bgColor={"#70A0AF"}
-            color={"white"}
-            _hover={{ bgColor: "#706993", color: "white" }}
-            onClick={(e) => handleSubmitInfo(e)}
-          >
-            Submit
-          </Button>
-        </ButtonGroup>
+          </ButtonGroup>
         </VStack>
       </Card>
     </>
