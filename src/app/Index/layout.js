@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   IconButton,
@@ -27,7 +28,7 @@ import {
   AiOutlineFolder,
   AiOutlineFileAdd,
 } from "react-icons/ai";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import NextLink from "next/link";
 import { signOut } from "next-auth/react";
 /*const LinkItems = [
@@ -59,15 +60,21 @@ export default function SidebarWithHeader({ children }) {
       </Drawer>
       {/* mobilenav */}
       <MobileNav onOpen={onOpen} />
-      <Box ml={{ base: 0, md: 60 }} p="4" px="8">
+      <Flex
+        align="center"
+        justify="center"
+        p="4"
+        px="8"
+        ml={{ base: "0", md: "60" }}
+      >
         {children}
-      </Box>
+      </Flex>
     </Box>
   );
 }
 
 const SidebarContent = ({ onClose, ...rest }) => {
-  const router = useRouter();
+  //const router = useRouter();
   return (
     <Box
       transition="3s ease"
@@ -216,8 +223,15 @@ const MobileNav = ({ onOpen, ...rest }) => {
             <Text display={{ base: "none", md: "flex" }}>Rank Lastname</Text>
           </MenuButton>
           <MenuList>
-            <MenuItem textColor={"#331E38"} onClick={() => router.push("/profile")}>Profile</MenuItem>
-            <MenuItem textColor={"#331E38"} onClick={handleLogout}>Logout</MenuItem>
+            <MenuItem
+              textColor={"#331E38"}
+              onClick={() => router.push("/profile")}
+            >
+              Profile
+            </MenuItem>
+            <MenuItem textColor={"#331E38"} onClick={handleLogout}>
+              Logout
+            </MenuItem>
           </MenuList>
         </Menu>
       </Box>

@@ -1,7 +1,7 @@
-import Reports from "../screens/Reports";
+import Reports from "../app/Reports/page";
 import { getUserReports } from "server/mongodb/actions/Report";
 import { unstable_getServerSession } from "next-auth";
-import { authOptions } from "src/pages/api/auth/[...nextauth]";
+import { authOptions } from "./api/auth/[...nextauth]";
 
 export async function getServerSideProps(context) {
   const session = await unstable_getServerSession(

@@ -1,3 +1,3 @@
-import NewReport from "../screens/NewReport";
+import NewReport from "../app/NewReport/page";
 
 export default NewReport;

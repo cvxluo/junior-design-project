@@ -1,3 +1,3 @@
-import ViewReport from "../screens/ViewReport";
+import ViewReport from "../app/ViewReport/page";
 
 export default ViewReport;

@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import {
   VStack,
@@ -8,13 +9,12 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
-import Layout from "src/components/layout";
-import urls from "utils/urls";
+import Layout from "src/app/Index/layout";
 import { signOut } from "next-auth/react";
 import { useEffect } from "react";
 import { getSession } from "next-auth/react";
 
-export default function Profile() {
+export default function Page() {
   const [email, setEmail] = useState("");
 
   useEffect(() => {
@@ -54,10 +54,10 @@ export default function Profile() {
               <Button isDisabled>Delete Account</Button>
 
               <Button
-                variant={"solid"}
-                bgColor={"purple.600"}
+                mb={"5"}
+                bgColor={"#70A0AF"}
                 color={"white"}
-                _hover={{ bgColor: "black", color: "white" }}
+                _hover={{ bgColor: "#706993", color: "white" }}
                 onClick={handleLogout}
               >
                 Logout
@@ -70,6 +70,6 @@ export default function Profile() {
   );
 }
 
-Profile.getLayout = function (page) {
+Page.getLayout = function (page) {
   return <Layout>{page}</Layout>;
 };

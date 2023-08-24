@@ -18,6 +18,9 @@ export default {
     reports: "/reports",
     profile: "/profile",
     login: "/login",
+    newreport: "/newreport",
+    viewreport: "/newreport",
+    logout: "/logout",
   },
   api: {
     reports: {

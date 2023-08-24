@@ -1,30 +1,29 @@
+"use client";
+
 import { useState } from "react";
 import {
   Card,
   Text,
-  Input,
   Button,
-  ButtonGroup,
-  FormControl,
-  FormLabel,
   CardBody,
   CardHeader,
   CardFooter,
-  Icon,
-  VStack,
+  FormControl,
+  FormLabel,
   FormErrorMessage,
+  Input,
   Select,
+  VStack,
 } from "@chakra-ui/react";
-import urls from "utils/urls";
+
 import { signIn } from "next-auth/react";
 import { signUp } from "src/actions/User";
-import Layout from "src/components/layoutLogin";
-import { AiOutlineFileProtect } from "react-icons/ai";
+import Layout from "../Login/layout";
 
-export default function Login() {
+export default function Page() {
   const [mode, setMode] = useState("Login");
-  const [email, setEmail] = useState("");
   const [rank, setRank] = useState("");
+  const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [suffix, setSuffix] = useState("");
@@ -65,7 +64,9 @@ export default function Login() {
         w={{ md: "lg" }}
         bgColor={"white"}
       >
-        <CardHeader mb={-5} fontSize={30} color={"black"}>{mode}</CardHeader>
+        <CardHeader mb={-5} fontSize={30} color={"black"}>
+          {mode}
+        </CardHeader>
         <CardBody>
           {mode === "Login" && (
             <div>
@@ -121,7 +122,7 @@ export default function Login() {
                   bg="#ECECEC"
                   mb={3}
                   size={"md"}
-                  _hover={{ bgColor: "#706993"}}
+                  _hover={{ bgColor: "#706993" }}
                   onChange={(e) => setReportType(e.target.value)}
                 >
                   <option value={1}>EPR</option>
@@ -143,7 +144,7 @@ export default function Login() {
                   bg="#ECECEC"
                   mb={3}
                   size={"md"}
-                  _hover={{ bgColor: "#706993"}}
+                  _hover={{ bgColor: "#706993" }}
                   onChange={(e) => setRank(e.target.value)}
                 >
                   <option value={"AB"}>Airman Basic (AB)</option>
@@ -314,7 +315,7 @@ export default function Login() {
       </Card>
       <VStack>
         {mode === "Login" ? (
-          <Text align={"center"}>Don't have an account?</Text>
+          <Text align={"center"}>Need an account?</Text>
         ) : (
           <Text align={"center"}>Already have an account?</Text>
         )}
@@ -335,6 +336,6 @@ export default function Login() {
   );
 }
 
-Login.getLayout = function (page) {
+Page.getLayout = function (page) {
   return <Layout>{page}</Layout>;
 };
