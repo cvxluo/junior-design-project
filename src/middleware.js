@@ -8,6 +8,5 @@ export const config = {
     "/reports",
     "/newreport",
     "/viewreport",
-    "/logout",
   ],
 };
