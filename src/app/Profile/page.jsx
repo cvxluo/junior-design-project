@@ -16,9 +16,19 @@ import { getSession } from "next-auth/react";
 
 export default function Page() {
   const [email, setEmail] = useState("");
+  const [rank, setRank] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [suffix, setSuffix] = useState("");
+  const [reportType, setReportType] = useState(0);
 
   useEffect(() => {
     getSession().then((session) => setEmail(session.user.email));
+    getSession().then((session) => setRank(session.user.rank));
+    getSession().then((session) => setFirstName(session.user.firstName));
+    getSession().then((session) => setLastName(session.user.lastName));
+    getSession().then((session) => setSuffix(session.user.suffix));
+    getSession().then((session) => setReportType(session.user.reportType));
   }, []);
   const handleLogout = (e) => {
     e.preventDefault();
@@ -43,18 +53,36 @@ export default function Page() {
               </Box>
               <Box p="5">
                 <Text fontSize="2xl" fontWeight="bold">
-                  Account Creation Date
+                  Name
                 </Text>
-                <Text fontSize="lg">08/01/2023</Text>
+                <Text fontSize="lg">
+                  {firstName} {lastName}
+                </Text>
+              </Box>
+              <Box p="5">
+                <Text fontSize="2xl" fontWeight="bold">
+                  Suffix
+                </Text>
+                <Text fontSize="lg">{suffix}</Text>
+              </Box>
+              <Box p="5">
+                <Text fontSize="2xl" fontWeight="bold">
+                  Rank
+                </Text>
+                <Text fontSize="lg">{rank}</Text>
+              </Box>
+              <Box p="5">
+                <Text fontSize="2xl" fontWeight="bold">
+                  Report Type
+                </Text>
+                <Text fontSize="lg">{reportType}</Text>
               </Box>
             </VStack>
-
             <VStack spacing={10}>
               <Button isDisabled>Change Password</Button>
+              <Button isDisabled>Edit Profile</Button>
               <Button isDisabled>Delete Account</Button>
-
               <Button
-                mb={"5"}
                 bgColor={"#70A0AF"}
                 color={"white"}
                 _hover={{ bgColor: "#706993", color: "white" }}

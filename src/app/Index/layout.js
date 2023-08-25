@@ -60,15 +60,9 @@ export default function SidebarWithHeader({ children }) {
       </Drawer>
       {/* mobilenav */}
       <MobileNav onOpen={onOpen} />
-      <Flex
-        align="center"
-        justify="center"
-        p="4"
-        px="8"
-        ml={{ base: "0", md: "60" }}
-      >
+      <Box p="4" px="8" ml={{ base: "0", md: "60" }}>
         {children}
-      </Flex>
+      </Box>
     </Box>
   );
 }

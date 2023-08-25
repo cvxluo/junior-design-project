@@ -1,20 +1,41 @@
-import { Box, Heading, UnorderedList, Text, ListItem } from "@chakra-ui/react";
-
+import {
+  Card,
+  Heading,
+  UnorderedList,
+  Text,
+  ListItem,
+  CardHeader,
+  CardBody,
+} from "@chakra-ui/react";
 const InfoBox = ({ content }) => {
   const { title, paragraphContent, listContent } = content;
 
   return (
-    <Box backgroundColor="#22527B" width="80vw" p="1.5em" color="#F1F1F1">
-      <Heading>{title}</Heading>
-      <Text>{paragraphContent}</Text>
-      <UnorderedList>
-        {listContent.map((text, index) => (
-          <ListItem key={index}>
-            <Text>{text}</Text>
-          </ListItem>
-        ))}
-      </UnorderedList>
-    </Box>
+    <Card
+      backgroundColor="#706993"
+      p="1.5em"
+      w="100%"
+      color="white"
+      fontSize={{ base: "sm" }}
+    >
+      <CardHeader
+        fontSize={{ base: "md", md: "lg" }}
+        fontWeight={"bold"}
+        pb={"0"}
+      >
+        {title}
+      </CardHeader>
+      <CardBody>
+        <Text>{paragraphContent}</Text>
+        <UnorderedList fontSize={{ base: "sm", md: "md" }}>
+          {listContent.map((text, index) => (
+            <ListItem key={index}>
+              <Text>{text}</Text>
+            </ListItem>
+          ))}
+        </UnorderedList>
+      </CardBody>
+    </Card>
   );
 };
 
