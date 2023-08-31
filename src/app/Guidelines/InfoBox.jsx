@@ -1,6 +1,6 @@
 import {
   Card,
-  Heading,
+  //Heading,
   UnorderedList,
   Text,
   ListItem,
