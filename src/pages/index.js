@@ -1,3 +1,3 @@
-import HomePage from "../screens/Home";
+import HomePage from "../app/Index/page";
 
 export default HomePage;
