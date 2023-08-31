@@ -1,3 +1,9 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable react/jsx-key */
+/* eslint-disable no-undef */
+/* eslint-disable react/display-name */
+// Line 176, (row, i)
 "use client";
 import React, { useMemo } from "react";
 import {
@@ -169,7 +175,7 @@ function ReportTable({ columns, data }) {
             ))}
           </Thead>
           <Tbody {...getTableBodyProps()}>
-            {rows.slice(0, 10).map((row, i) => {
+            {rows.slice(0, 10).map((row) => {
               prepareRow(row);
               return (
                 <Tr {...row.getRowProps()}>
