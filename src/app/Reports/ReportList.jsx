@@ -14,7 +14,7 @@ const ReportList = ({ reports }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box backgroundColor="#22527B" width="80vw" p="1.5em" color="#F1F1F1">
+    <Box>
       <Heading>Past Reports</Heading>
       <UnorderedList>
         {reports.map(({ name, data, date_of_creation, quarter, year }) => (

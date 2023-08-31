@@ -1,6 +1,14 @@
 import urls from "utils/urls";
 
-export const signUp = (email, password) =>
+export const signUp = (
+  email,
+  rank,
+  firstName,
+  lastName,
+  suffix,
+  reportType,
+  password
+) =>
   fetch(urls.baseUrl + urls.api.user.signUp, {
     method: "POST",
     mode: "same-origin",
@@ -10,6 +18,11 @@ export const signUp = (email, password) =>
     },
     body: JSON.stringify({
       email,
+      rank,
+      firstName,
+      lastName,
+      suffix,
+      reportType,
       password,
     }),
   })

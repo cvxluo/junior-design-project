@@ -1,3 +1,4 @@
+"use client";
 import {
   Tabs,
   TabList,
@@ -8,9 +9,9 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
+import Layout from "src/app/Index/layout";
 
-import NavBar from "../../components/NavBar/NavBar";
-import InfoBox from "src/components/InfoBox";
+import InfoBox from "./InfoBox";
 
 const infoDos = {
   title: "II. Do:",
@@ -227,39 +228,46 @@ const oprEx = {
   ],
 };
 
-export default function Guidelines() {
+export default function Page() {
   return (
     <div>
-      <NavBar />
-      <Box backgroundColor="blue">
-        <Tabs variant="solid-rounded" size="md">
+      <Box backgroundColor="white">
+        <Tabs variant="solid-rounded" fontSize={{ base: "sm", md: "md" }}>
           <Center>
             <TabList m="1em" spacing={10}>
               <Tab
-                backgroundColor="lightblue"
-                mx="1em"
-                _selected={{ color: "white", bg: "darkblue" }}
+                fontSize={{ base: "sm", md: "md" }}
+                backgroundColor="#70A0AF"
+                color={"#ECECEC"}
+                mx={{ base: "0.5", md: "1em" }}
+                _selected={{ color: "white", bg: "#331E38" }}
               >
                 General
               </Tab>
               <Tab
-                backgroundColor="lightblue"
-                mx="1em"
-                _selected={{ color: "white", bg: "darkblue" }}
+                fontSize={{ base: "sm", md: "md" }}
+                backgroundColor="#70A0AF"
+                color={"#ECECEC"}
+                mx={{ base: "0.5", md: "1em" }}
+                _selected={{ color: "white", bg: "#331E38" }}
               >
                 OPR
               </Tab>
               <Tab
-                backgroundColor="lightblue"
-                mx="1em"
-                _selected={{ color: "white", bg: "darkblue" }}
+                fontSize={{ base: "sm", md: "md" }}
+                backgroundColor="#70A0AF"
+                color={"#ECECEC"}
+                mx={{ base: "0.5", md: "1em" }}
+                _selected={{ color: "white", bg: "#331E38" }}
               >
                 EPR
               </Tab>
               <Tab
-                backgroundColor="lightblue"
-                mx="1em"
-                _selected={{ color: "white", bg: "darkblue" }}
+                fontSize={{ base: "sm", md: "md" }}
+                backgroundColor="#70A0AF"
+                color={"#ECECEC"}
+                mx={{ base: "0.5", md: "1em" }}
+                _selected={{ color: "white", bg: "#331E38" }}
               >
                 Examples
               </Tab>
@@ -301,3 +309,7 @@ export default function Guidelines() {
     </div>
   );
 }
+
+Page.getLayout = function (page) {
+  return <Layout>{page}</Layout>;
+};
