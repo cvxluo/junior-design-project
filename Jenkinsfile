@@ -47,7 +47,7 @@ pipeline {
     post {
         always {
             echo "Send pipeline notification"
-            discordSend description: "New main build is finished. Result is $currentBuild.currentResult", title: "Merit Pipeline", result: currentBuild.currentResult, webhookURL: "$WEBHOOK"
+            discordSend description: "New main build #$BUILD_NUMBER is finished. Result is $currentBuild.currentResult" + ".", title: "Merit Pipeline", result: currentBuild.currentResult, webhookURL: "$WEBHOOK"
         }
     }
 }
