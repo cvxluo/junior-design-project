@@ -1,0 +1,13 @@
+# Docker-compose created exclusively to load MongoDB URI from an .env file
+version: "3.8"
+services:
+  server:
+    #container_name: Merit
+    build: .
+    #network_mode: 'host'
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    #stdin_open: true
+    #tty: true
