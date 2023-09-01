@@ -19,7 +19,7 @@ COPY --from=build --chown=user:user /app/.next/static ./.next/static
 USER user
 
 ENV PORT=3000
-ENV NEXTAUTH_SECRET=ETC
+ENV NEXTAUTH_SECRET=MONEY
 ENV HOSTNAME=0.0.0.0
 ENV MONGODB_URI=URI
 #ENV MONGODB_NAME=name
