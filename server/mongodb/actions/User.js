@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import mongoDB from "../index";
+import mongoDB from "../dbConnection";
 import User from "../models/User";
 
 export async function login({ email, password }) {

@@ -1,4 +1,4 @@
-import mongoDB from "../index";
+import mongoDB from "../dbConnection";
 import ReportSchema from "../models/Report";
 
 export async function createReport(reportData) {

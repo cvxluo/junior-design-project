@@ -1,6 +1,6 @@
 {
-  "name": "junior-design",
-  "version": "0.1.0",
+  "name": "Merit",
+  "version": "0.6.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
