@@ -23,6 +23,8 @@ USER user
 #RUN grep -rl 'api/auth/signin' ./ |  xargs sed -i 's|api/auth/signin|login|g'
 #RUN grep -q 'signInUrl.searchParams.append("callbackUrl", `${basePath}${pathname}${search}`);' ./.next/server/src/middleware.js && sed -i '/signInUrl.searchParams.append("callbackUrl", `${basePath}${pathname}${search}`);/a \    console.log("Sign in URL is " + `${signInUrl}`);\n    console.log(process.env.NEXTAUTH_URL);' .next/server/src/middleware.js
 #RUN grep -q 'signInUrl.searchParams.append("callbackUrl", `${basePath}${pathname}${search}`);' ./.next/server/src/middleware.js && sed -i '/signInUrl.searchParams.append("callbackUrl", `${basePath}${pathname}${search}`);/a \    console.log("Sign in URL is " + `${signInUrl}`);\n    signInUrl="http://merit.testing.systems/login?callbackUrl=http%3A%2F%2Fmerit.testing.systems%2F";' .next/server/src/middleware.js
+RUN sed -i '/const signInUrl = new URL(`${basePath}${signInPage}`, origin);/a \    console.log("Sign in URL is " + `${signInUrl}`);\n    console.log("signInPage is " + `${signInPage}`);\n    console.log("origin is " + `${origin}`);' .next/server/src/middleware.js
+RUN sed -i '/signInUrl.searchParams.append("callbackUrl", `${basePath}${pathname}${search}`);/a \    console.log("basePath is " + `${basePath}`);\n    console.log("pathname is " + `${pathname}`);\n    console.log("search is " + `${search}`);\n    console.log("Sign in URL is " + `${signInUrl}`);' .next/server/src/middleware.js
 RUN sed -i 's|return NextResponse.redirect(signInUrl);|return NextResponse.redirect(process.env.NEXTAUTH_URL + ":80/api/auth/signin?callbackUrl=%2F");|g' .next/server/src/middleware.js
 
 ENV NEXT_TELEMETRY_DISABLED 1
