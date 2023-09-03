@@ -22,8 +22,7 @@ USER user
 # Mitigation due to issues with next-auth and ECS
 #RUN grep -rl 'api/auth/signin' ./ |  xargs sed -i 's|api/auth/signin|login|g'
 #RUN grep -q 'signInUrl.searchParams.append("callbackUrl", `${basePath}${pathname}${search}`);' ./.next/server/src/middleware.js && sed -i '/signInUrl.searchParams.append("callbackUrl", `${basePath}${pathname}${search}`);/a \    console.log("Sign in URL is " + `${signInUrl}`);\n    console.log(process.env.NEXTAUTH_URL);' .next/server/src/middleware.js
-RUN grep -q 'signInUrl.searchParams.append("callbackUrl", `${basePath}${pathname}${search}`);' ./.next/server/src/middleware.js && sed -i '/signInUrl.searchParams.append("callbackUrl", `${basePath}${pathname}${search}`);/a \    signInUrl="http://merit.testing.systems:80/api/auth/signin?callbackUrl=%2F";' .next/server/src/middleware.js
-
+RUN grep -q 'signInUrl.searchParams.append("callbackUrl", `${basePath}${pathname}${search}`);' ./.next/server/src/middleware.js && sed -i '/signInUrl.searchParams.append("callbackUrl", `${basePath}${pathname}${search}`);/a \    console.log("Sign in URL is " + `${signInUrl}`);\n    signInUrl="http://merit.testing.systems/login?callbackUrl=http%3A%2F%2Fmerit.testing.systems%2F";' .next/server/src/middleware.js
 
 ENV NEXT_TELEMETRY_DISABLED 1
 ENV NEXTAUTH_SECRET=SECRET
