@@ -52,7 +52,7 @@ export default NextAuth({
     strategy: "jwt",
   },
   pages: {
-    signIn: "/login",
-    signOut: "/logout",
+    signIn: "/Auth/Login",
+    signOut: "/Auth/Logout",
   },
 });
