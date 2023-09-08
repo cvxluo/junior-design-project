@@ -49,7 +49,7 @@ export default function Page() {
           <br />
           <Report />
           <ButtonGroup>
-            <Link href="/Dashboard/Index">
+            <Link href="/Dashboard/Home">
               <Button
                 bgColor={"#A0C1B9"}
                 color={"#331E38"}

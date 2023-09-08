@@ -49,7 +49,7 @@ export default function Page() {
       signIn("credentials", {
         email: email,
         password: password,
-        callbackUrl: "/Dashboard/Index",
+        callbackUrl: "/Dashboard/Home",
       });
     }
   };

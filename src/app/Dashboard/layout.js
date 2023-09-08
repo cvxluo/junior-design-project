@@ -97,7 +97,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
         />
       </Flex>
       <VStack mt="50px" ml={10} spacing={14} alignItems="left" w="100%">
-        <NextLink href="/Dashboard/Index">
+        <NextLink href="/Dashboard/Home">
           <Button
             variant="ghost"
             onClick={onClose}
