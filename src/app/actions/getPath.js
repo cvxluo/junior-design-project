@@ -18,7 +18,7 @@ export default {
       delete: "/api/Reports/delete",
     },
     user: {
-      signUp: "/auth/signUp",
+      signUp: "/api/user/signUp",
     },
   },
 };
