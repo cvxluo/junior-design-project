@@ -15,7 +15,7 @@ export default function Page() {
         <Heading mt={"5"} mb={"5"}>
           Logout successful.
         </Heading>
-        <Link href="/Auth/Login">
+        <Link href="/api/auth/login">
           <Button
             mb={"5"}
             bgColor={"#70A0AF"}

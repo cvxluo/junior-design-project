@@ -31,7 +31,7 @@ export default function Page() {
   }, []);
   const handleLogout = (e) => {
     e.preventDefault();
-    signOut({ callbackUrl: "/Logout" });
+    signOut({ callbackUrl: "/api/auth/logout" });
   };
   return (
     <Box>
