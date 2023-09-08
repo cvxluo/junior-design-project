@@ -17,7 +17,6 @@ import {
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
-import urls from "utils/urls";
 import { updateReport, getReport } from "src/app/actions/Report";
 import { getSession } from "next-auth/react";
 import Report from "../NewReport/report";
