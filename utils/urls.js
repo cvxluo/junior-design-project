@@ -1,6 +1,6 @@
 function getBaseURL() {
   // if backend
-  if (process.env.VERCEL_URL) {
+  if (process.env.NEXTAUTH_URL) {
     return `https://${process.env.NEXTAUTH_URL}`;
   }
   return "http://localhost:3000";
