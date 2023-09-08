@@ -47,7 +47,7 @@ pipeline {
     post {
         always {
             echo "Send pipeline notification"
-            discordSend description: "Build #$BUILD_NUMBER is finished." + ".", title: currentBuild.fullProjectName, result: currentBuild.currentResult, webhookURL: "$WEBHOOK"
+            discordSend description: "Build #$BUILD_NUMBER is finished.", title: $env.BRANCH_NAME, result: currentBuild.currentResult, webhookURL: "$WEBHOOK"
         }
     }
 }
